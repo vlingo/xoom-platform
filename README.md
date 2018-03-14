@@ -4,7 +4,7 @@ Provides vlingo/platform central "build all" and other control.
 Use "mvn install" from here with the pom.xml and the entire platform to build.
 
 ```
-consule:vlingo-platform> mvn install
+console:vlingo-platform> mvn install
 ```
 
 License (See LICENSE file for full license)
