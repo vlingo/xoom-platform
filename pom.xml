@@ -28,6 +28,7 @@
     <module>../vlingo-actors</module>
     <module>../vlingo-wire</module>
     <module>../vlingo-cluster</module>
+    <module>../vlingo-auth</module>
     <module>../vlingo-directory</module>
     <module>../vlingo-http</module>
     <module>../vlingo-maven-plugin</module>
