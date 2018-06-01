@@ -4,15 +4,18 @@ plugins {
   id 'org.ajoberstar.grgit' version '1.7.2'
 }
 
+ext.githubUri = 'https://github.com/vlingo/'
+ext.checkoutDir = '../'
+
 ext.repos = [
-  [dir: '../vlingo-common', uri: 'https://github.com/vlingo/vlingo-common.git', version: '0.3.3'],
-  [dir: '../vlingo-actors', uri: 'https://github.com/vlingo/vlingo-actors.git', version: '0.4.5'],
-  [dir: '../vlingo-auth', uri: 'https://github.com/vlingo/vlingo-auth.git', version: '0.3.4'],
-  [dir: '../vlingo-cluster', uri: 'https://github.com/vlingo/vlingo-cluster.git', version: '0.3.3'],
-  [dir: '../vlingo-directory', uri: 'https://github.com/vlingo/vlingo-directory.git', version: '0.5.3'],
-  [dir: '../vlingo-http', uri: 'https://github.com/vlingo/vlingo-http.git', version: '0.3.3'],
-  [dir: '../vlingo-maven-plugin', uri: 'https://github.com/vlingo/vlingo-maven-plugin.git', version: '0.2.2'],
-  [dir: '../vlingo-wire', uri: 'https://github.com/vlingo/vlingo-wire.git', version: '0.3.4'],
+  'vlingo-common': [version: '0.3.3'],
+  'vlingo-actors': [version: '0.4.5'],
+  'vlingo-auth': [version: '0.3.4'],
+  'vlingo-cluster': [version: '0.3.3'],
+  'vlingo-directory': [version: '0.5.3'],
+  'vlingo-http': [version: '0.3.3'],
+  'vlingo-maven-plugin': [version: '0.2.2'],
+  'vlingo-wire': [version: '0.3.4'],
 ]
 
 // simple run gradle or ./gradlew
@@ -23,7 +26,7 @@ task checkout {
   description 'checkout or update all vlingo repositories'
 
   doLast {
-    repos.each { repo ->
+    repos.each { repo, _config ->
       cloneOrPull repo
     }
   }
@@ -34,12 +37,13 @@ task syncVersions {
   description 'synchronizes the repo and dependency versions'
 
   doLast {
-    repos.each { repo ->
-      replaceVersionIn repo
+    repos.each { repo, config ->
+      replaceVersionIn repo, config
     }
   }
 }
 
+// default umbrella task
 task sync(dependsOn: [
   checkout,
   syncVersions,
@@ -50,14 +54,14 @@ task sync(dependsOn: [
 def cloneOrPull(repo) {
       def grgit
 
-      def dir = repo.dir
-      def uri = repo.uri
+      def dir = "$checkoutDir$repo"
+      def uri = "$githubUri$repo"
 
       if (!file(dir).exists()) {
         println "Cloning $uri into $dir"
         grgit = org.ajoberstar.grgit.Grgit.clone(dir: dir, uri: uri)
       } else {
-        println "Pulling $uri in $dir"
+        println "Pulling $uri into $dir"
         grgit = org.ajoberstar.grgit.Grgit.open(dir: dir)
         grgit.pull()
       }
@@ -67,16 +71,17 @@ def cloneOrPull(repo) {
 
 }
 
-def replaceVersionIn(repo) {
-  def dir = repo.dir
+def replaceVersionIn(repo, config) {
+  def dir = "$checkoutDir$repo"
   def replSets = [
     [name: 'README.md', versionMatch: /(.)/]
   ]
 
   replSets.each { repl ->
     def path = "$dir/$repl.name"
-    println "Syncing $path to $repo.version"
+    println "Syncing $path to $config.version"
 
+    // todo: pom.xml will need to be parsed...
     ant.replaceregexp(
       match: /(.)/, //todo
       replace: "\\1", //todo
