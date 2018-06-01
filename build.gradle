@@ -57,7 +57,7 @@ def cloneOrPull(repo) {
         println "Cloning $uri into $dir"
         grgit = org.ajoberstar.grgit.Grgit.clone(dir: dir, uri: uri)
       } else {
-        println "Culling $uri in $dir"
+        println "Pulling $uri in $dir"
         grgit = org.ajoberstar.grgit.Grgit.open(dir: dir)
         grgit.pull()
       }
