@@ -7,6 +7,12 @@ plugins {
 ext.repos = [
   [dir: '../vlingo-common', uri: 'https://github.com/vlingo/vlingo-common.git', version: '0.3.3'],
   [dir: '../vlingo-actors', uri: 'https://github.com/vlingo/vlingo-actors.git', version: '0.4.5'],
+  [dir: '../vlingo-auth', uri: 'https://github.vlingo-auth/vlingo-actors.git', version: '0.3.4'],
+  [dir: '../vlingo-cluster', uri: 'https://github.com/vlingo/vlingo-cluster.git', version: '0.3.3'],
+  [dir: '../vlingo-directory', uri: 'https://github.com/vlingo/vlingo-directory.git', version: '0.5.3'],
+  [dir: '../vlingo-http', uri: 'https://github.com/vlingo/vlingo-http.git', version: '0.3.3'],
+  [dir: '../vlingo-maven-plugin', uri: 'https://github.com/vlingo/vlingo-maven-plugin.git', version: '0.2.2'],
+  [dir: '../vlingo-wire', uri: 'https://github.com/vlingo/vlingo-wire.git', version: '0.3.4'],
 ]
 
 // simple run gradle or ./gradlew
