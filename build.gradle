@@ -1,0 +1,84 @@
+import groovy.json.*
+
+plugins {
+  id 'org.ajoberstar.grgit' version '1.7.2'
+}
+
+ext.repos = [
+  [dir: '../vlingo-common', uri: 'https://github.com/vlingo/vlingo-common.git', version: '0.3.3'],
+  [dir: '../vlingo-actors', uri: 'https://github.com/vlingo/vlingo-actors.git', version: '0.4.5'],
+]
+
+// simple run gradle or ./gradlew
+defaultTasks 'sync'
+
+// first do this
+task checkout {
+  description 'checkout or update all vlingo repositories'
+
+  doLast {
+    repos.each { repo ->
+      cloneOrPull repo
+    }
+  }
+}
+
+// then that
+task syncVersions {
+  description 'synchronizes the repo and dependency versions'
+
+  doLast {
+    repos.each { repo ->
+      replaceVersionIn repo
+    }
+  }
+}
+
+task sync(dependsOn: [
+  checkout,
+  syncVersions,
+]) {
+  description 'perform all maintenance actions at once'
+}
+
+def cloneOrPull(repo) {
+      def grgit
+
+      def dir = repo.dir
+      def uri = repo.uri
+
+      if (!file(dir).exists()) {
+        println "Cloning $uri into $dir"
+        grgit = org.ajoberstar.grgit.Grgit.clone(dir: dir, uri: uri)
+      } else {
+        println "Culling $uri in $dir"
+        grgit = org.ajoberstar.grgit.Grgit.open(dir: dir)
+        grgit.pull()
+      }
+
+      def lastCommit = new JsonBuilder(grgit.log(maxCommits: 1).last()).toPrettyString()
+      println "Last commit: $lastCommit"
+
+}
+
+def replaceVersionIn(repo) {
+  def dir = repo.dir
+  def replSets = [
+    [name: 'README.md', versionMatch: /(.)/]
+  ]
+
+  replSets.each { repl ->
+    def path = "$dir/$repl.name"
+    println "Syncing $path to $repo.version"
+
+    ant.replaceregexp(
+      match: /(.)/, //todo
+      replace: "\\1", //todo
+      encoding: 'UTF-8',
+      flags: 'g') {
+        fileset(dir: dir) {
+            include(name: 'README.md')
+        }
+    }
+  }
+}
