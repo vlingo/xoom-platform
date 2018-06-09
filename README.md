@@ -12,12 +12,16 @@ console:vlingo-platform> mvn install
 
 ## maintaining the libraries
 
+### synchronizing library versions
+
 - see [build.gradle](build.gradle) for the list of repos, versions and replacement regexes
 - adjust the config
 - if the directories are checked out already next to this repo, make sure, the right branches (`master`) are checked out, and all changes are committed
 - run `gradle` or `./gradlew`
 - alternatively, run `gradle syncVersions` without checking out automatically
 - review and commit the repos
+
+## license
 
 License (See LICENSE file for full license)
 -------------------------------------------
