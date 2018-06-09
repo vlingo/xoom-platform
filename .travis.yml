@@ -2,4 +2,4 @@ language: java
 install:
 - true # nothing to assemble
 script:
-- ./gradlew checkout
+- ./gradlew sync
