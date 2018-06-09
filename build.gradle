@@ -1,4 +1,5 @@
 import groovy.json.*
+import groovy.xml.XmlUtil
 
 plugins {
   id 'org.ajoberstar.grgit' version '1.7.2'
@@ -38,8 +39,8 @@ task syncVersions {
 
   doLast {
     repos.each { repo, config ->
-      replaceVersionIn repo, config
-      syncPomVersionsIn repo, repos
+      replaceVersionInTextFor repo, config
+      syncPomVersionsFor repo, config, repos
     }
   }
 }
@@ -72,7 +73,7 @@ def cloneOrPull(repo) {
 
 }
 
-def replaceVersionIn(repo, config) {
+def replaceVersionInTextFor(repo, config) {
   def dir = "$checkoutDir$repo"
   def replacementSets = [
     [name: 'README.md', versionRegex: /(<version>)(\S+)(<\/version>)/, replacement: "\\1${config.version}\\3"],
@@ -84,7 +85,7 @@ def replaceVersionIn(repo, config) {
 
   replacementSets.each { repl ->
     def path = "$dir/$repl.name"
-    println "Syncing $path to $config.version"
+    println "Syncing $path to $config.version. Regex: ${repl.versionRegex}"
 
     // simple regex replacements
     ant.replaceregexp(
@@ -99,7 +100,29 @@ def replaceVersionIn(repo, config) {
   }
 }
 
-def syncPomVersionsIn(repo, repos) {
+def syncPomVersionsFor(repo, config, repos) {
   def pom = "$checkoutDir${repo}/pom.xml"
-  println file(pom).exists()
+  def xml = file(pom).text
+  def root = new XmlParser().parseText(xml)
+ 
+  // sync the library version
+  root.version[0].value = config.version
+
+  // sync the dependencies versions
+  repos.each { name, dependency ->
+    root.dependencies.dependency
+      .findAll { it.artifactId.text() == name }
+      .each {
+        def oldVersion = it.version[0].text()
+        def newVersion = dependency.version
+        if( oldVersion != newVersion ) {
+          println "changing dependency ${it.artifactId.text()}: ${oldVersion} -> ${newVersion}"
+          it.version[0].value = newVersion
+        }
+      }
+  }
+ 
+  def writer = new XmlNodePrinter(new PrintWriter(file(pom)))
+  writer.preserveWhitespace = true
+  writer.print(root)
 }
