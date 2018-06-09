@@ -10,9 +10,9 @@ Use "mvn install" from here with the pom.xml and the entire platform to build.
 console:vlingo-platform> mvn install
 ```
 
-## maintaining the libraries
+## Maintaining the Libraries
 
-### synchronizing library versions
+### Synchronizing Library Versions
 
 - see [build.gradle](build.gradle) for the list of repos, versions and replacement regexes
 - adjust the config
@@ -20,8 +20,6 @@ console:vlingo-platform> mvn install
 - run `gradle` or `./gradlew`
 - alternatively, run `gradle syncVersions` without checking out automatically
 - review and commit the repos
-
-## license
 
 License (See LICENSE file for full license)
 -------------------------------------------
