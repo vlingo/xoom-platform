@@ -39,6 +39,7 @@ task syncVersions {
   doLast {
     repos.each { repo, config ->
       replaceVersionIn repo, config
+      syncPomVersionsIn repo, repos
     }
   }
 }
@@ -73,23 +74,32 @@ def cloneOrPull(repo) {
 
 def replaceVersionIn(repo, config) {
   def dir = "$checkoutDir$repo"
-  def replSets = [
-    [name: 'README.md', versionMatch: /(.)/]
+  def replacementSets = [
+    [name: 'README.md', versionRegex: /(<version>)(\S+)(<\/version>)/, replacement: "\\1${config.version}\\3"],
+    [name: 'README.md', versionRegex: /(compile.*\:)(\S+)(\')/, replacement: "\\1${config.version}\\3"],
+    [name: 'bintray.json', versionRegex: /(\s*\"version\":\s*\{\s*\"name\"\s*\:\s*\")(\S+)(\")/, replacement: "\\1${config.version}\\3"],
+    [name: 'bintray.json', versionRegex: /(${repo}\/)(\S+)(\/)/, replacement: "\\1${config.version}\\3"],
+    [name: 'bintray.json', versionRegex: /(${repo}-)(\S+)(\.)/, replacement: "\\1${config.version}\\3"],
   ]
 
-  replSets.each { repl ->
+  replacementSets.each { repl ->
     def path = "$dir/$repl.name"
     println "Syncing $path to $config.version"
 
-    // todo: pom.xml will need to be parsed...
+    // simple regex replacements
     ant.replaceregexp(
-      match: /(.)/, //todo
-      replace: "\\1", //todo
+      match: repl.versionRegex,
+      replace: repl.replacement,
       encoding: 'UTF-8',
       flags: 'g') {
         fileset(dir: dir) {
-            include(name: 'README.md')
+            include(name: repl.name)
         }
     }
   }
+}
+
+def syncPomVersionsIn(repo, repos) {
+  def pom = "$checkoutDir${repo}/pom.xml"
+  println file(pom).exists()
 }
