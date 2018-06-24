@@ -3,3 +3,4 @@ install:
 - true # nothing to assemble
 script:
 - ./gradlew sync
+- mvn install
