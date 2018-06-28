@@ -31,6 +31,7 @@
     <module>../vlingo-auth</module>
     <module>../vlingo-directory</module>
     <module>../vlingo-http</module>
+    <module>../vlingo-symbio</module>
     <module>../vlingo-maven-plugin</module>
     <!-- ../vlingo-maven-plugin-test This module must test from its root directory -->
   </modules>
