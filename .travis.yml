@@ -1,6 +1,13 @@
 language: java
 install:
 - true # nothing to assemble
+services:
+  - postgresql
+addons:
+  postgresql: "9.6"
+before_script:
+  - psql -c "CREATE DATABASE vlingo_test;" -U postgres
+  - psql -c "CREATE USER vlingo_user WITH PASSWORD 'vlingo123';" -U postgres
 script:
 - ./gradlew sync
 - mvn install
