@@ -15,8 +15,8 @@ ext.repos = [
   'vlingo-wire': [version: '0.3.6'],
   'vlingo-cluster': [version: '0.3.5'],
   'vlingo-directory': [version: '0.5.3'],
-  'vlingo-http': [version: '0.3.7'],
-  'vlingo-auth': [version: '0.3.6'],
+  'vlingo-http': [version: '0.3.8'],
+  'vlingo-auth': [version: '0.3.7'],
   'vlingo-symbio': [version: '0.2.8'],
   'vlingo-maven-plugin': [version: '0.2.3'],
 ]
