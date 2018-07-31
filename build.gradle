@@ -17,7 +17,9 @@ ext.repos = [
   'vlingo-directory': [version: '0.5.5'],
   'vlingo-http': [version: '0.4.2'],
   'vlingo-auth': [version: '0.4.1'],
-  'vlingo-symbio': [version: '0.3.2'],
+  'vlingo-symbio': [version: '0.3.3'],
+  'vlingo-symbio-dynamodb': [version: '0.3.3'],
+  'vlingo-symbio-jdbc': [version: '0.3.3'],
   'vlingo-maven-plugin': [version: '0.2.6'],
 ]
 
