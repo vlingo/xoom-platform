@@ -28,13 +28,13 @@
     <module>../vlingo-actors</module>
     <module>../vlingo-wire</module>
     <module>../vlingo-cluster</module>
-    <!-- module>../vlingo-lattice</module -->
     <module>../vlingo-auth</module>
     <module>../vlingo-directory</module>
     <module>../vlingo-http</module>
     <module>../vlingo-symbio</module>
     <module>../vlingo-symbio-dynamodb</module>
     <module>../vlingo-symbio-jdbc</module>
+    <module>../vlingo-lattice</module>
     <module>../vlingo-maven-plugin</module>
     <!-- ../vlingo-maven-plugin-test This module must test from its root directory -->
   </modules>
