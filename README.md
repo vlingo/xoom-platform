@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.org/vlingo/vlingo-platform.svg?branch=master)](https://travis-ci.org/vlingo/vlingo-platform)
 
-Provides vlingo/platform central "build all" and other control. [Read about the vlingo/platform and its architecture](https://vlingo.io/).
+[Official vlingo/platform website](https://vlingo.io/).
+
+Provides vlingo/platform central "build all" and other control. [Read about the vlingo/platform](https://kalele.io/blog-posts/vlingo-platform/) and about [its architecture](https://kalele.io/blog-posts/vlingo-platform-architecture-part1/).
 
 Use "mvn install" from here with the pom.xml and the entire platform to build.
 
