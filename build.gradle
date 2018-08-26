@@ -11,17 +11,17 @@ ext.checkoutDir = '../'
 // this is the central desired version configuration for the vlingo platform
 ext.repos = [
   'vlingo-common': [version: '0.3.4'],
-  'vlingo-actors': [version: '0.5.8'],
-  'vlingo-wire': [version: '0.4.7'],
-  'vlingo-cluster': [version: '0.4.5'],
-  'vlingo-lattice': [version: '0.1.2'],
+  'vlingo-actors': [version: '0.5.9'],
+  'vlingo-wire': [version: '0.4.8'],
+  'vlingo-cluster': [version: '0.4.6'],
+  'vlingo-lattice': [version: '0.1.3'],
   'vlingo-directory': [version: '0.5.7'],
-  'vlingo-http': [version: '0.5.3'],
-  'vlingo-auth': [version: '0.5.3'],
-  'vlingo-symbio': [version: '0.4.1'],
-  'vlingo-symbio-dynamodb': [version: '0.4.1'],
-  'vlingo-symbio-jdbc': [version: '0.4.1'],
-  'vlingo-maven-plugin': [version: '0.3.3'],
+  'vlingo-http': [version: '0.5.4'],
+  'vlingo-auth': [version: '0.5.4'],
+  'vlingo-symbio': [version: '0.4.2'],
+  'vlingo-symbio-dynamodb': [version: '0.4.2'],
+  'vlingo-symbio-jdbc': [version: '0.4.2'],
+  'vlingo-maven-plugin': [version: '0.3.4'],
 ]
 
 // simple run gradle or ./gradlew
