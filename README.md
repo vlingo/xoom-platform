@@ -23,6 +23,19 @@ console:vlingo-platform> mvn install
 - alternatively, run `gradle syncVersions` without checking out automatically
 - review and commit the repos
 
+### Travis to Bintray
+
+Create a `.travis.yml` file with build statements. You must create a `deploy.key` in this file using the following command-line tool:
+
+```
+travis encrypt <YOUR BINTRAY API KEY> --add deploy.key
+```
+You get your Bintray API key from your Bintray user user profile:
+
+```
+  Username-drop-menu > Edit Profile > API Key (left bar menu)
+```
+
 License (See LICENSE file for full license)
 -------------------------------------------
 Copyright © 2012-2018 Vaughn Vernon. All rights reserved.
