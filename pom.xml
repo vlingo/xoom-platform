@@ -35,6 +35,7 @@
     <module>../vlingo-symbio-dynamodb</module>
     <module>../vlingo-symbio-jdbc</module>
     <module>../vlingo-lattice</module>
+    <module>../vlingo-telemetry</module>
     <module>../vlingo-maven-plugin</module>
     <!-- ../vlingo-maven-plugin-test This module must test from its root directory -->
   </modules>
