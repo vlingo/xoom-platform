@@ -36,6 +36,13 @@ You get your Bintray API key from your Bintray user user profile:
   Username-drop-menu > Edit Profile > API Key (left bar menu)
 ```
 
+## Deployment to Pivotal Cloud Foundry
+
+You can refer to [this link](PivotalCloudFoundry/DEPLOY.md) to read the documentation about how to deploy to Pivotal Cloud Foundry platform.
+
+In our [examples repository](https://github.com/vlingo/vlingo-examples) you have an example of how to deploy two services working together.
+
+
 License (See LICENSE file for full license)
 -------------------------------------------
 Copyright © 2012-2018 Vaughn Vernon. All rights reserved.
