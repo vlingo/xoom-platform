@@ -5,6 +5,9 @@ target/
 .settings
 .DS_Store
 
+# VSCode
+.vscode
+
 # Intellij
 .idea/
 *.iml
