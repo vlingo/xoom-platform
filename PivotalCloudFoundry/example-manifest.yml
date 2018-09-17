@@ -1,0 +1,12 @@
+applications:
+- name: <service_name>
+  docker:
+    image: <docker_image>
+  instances: 1
+  disk_quota: 1G
+  memory: 256M
+  routes:
+  - route: <subdomain>.cfapps.io # This will be the external url of the service
+  stack: cflinuxfs2
+  env:
+    SOME_ENV: <SOME_VALUE> # Some environment variable to use inside our application
