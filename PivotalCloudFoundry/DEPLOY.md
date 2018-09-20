@@ -13,7 +13,7 @@ The first thing we need to do is to generate a docker image and push it to any r
 3. After that, login to the registry with your [docker cli](https://docs.docker.com/engine/reference/commandline/login/) by typing `docker login` in your shell (terminal window).
 4. Now you are ready to push your image to DockerHub repository using `docker-release.sh`
 
-        ```./docker-release.sh <account_name/name>```
+        ./docker-release.sh <account_name/name>
 
 Once the script finishes, the docker image is published to DockerHub and ready to be deployed.
 
