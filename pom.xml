@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.vlingo</groupId>
   <artifactId>vlingo-platform</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.7.2</version>
   <packaging>pom</packaging>
 
   <name>vlingo-platform</name>
@@ -33,6 +33,7 @@
     <module>../vlingo-auth</module>
     <module>../vlingo-symbio</module>
     <module>../vlingo-symbio-dynamodb</module>
+    <module>../vlingo-symbio-geode</module>
     <module>../vlingo-symbio-jdbc</module>
     <module>../vlingo-lattice</module>
     <module>../vlingo-telemetry</module>
