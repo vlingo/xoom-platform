@@ -10,21 +10,21 @@ ext.checkoutDir = '../'
 
 // this is the central desired version configuration for the vlingo platform
 ext.repos = [
-             'vlingo-common': [version: '0.7.2'],
-             'vlingo-actors': [version: '0.7.2'],
-               'vlingo-wire': [version: '0.7.2'],
-            'vlingo-cluster': [version: '0.7.2'],
-            'vlingo-lattice': [version: '0.7.2'],
-          'vlingo-directory': [version: '0.7.2'],
-               'vlingo-http': [version: '0.7.2'],
-               'vlingo-auth': [version: '0.7.2'],
-             'vlingo-symbio': [version: '0.7.2'],
-    'vlingo-symbio-dynamodb': [version: '0.7.2'],
-       'vlingo-symbio-geode': [version: '0.7.2'],
-        'vlingo-symbio-jdbc': [version: '0.7.2'],
-          'vlingo-telemetry': [version: '0.7.2'],
-       'vlingo-maven-plugin': [version: '0.7.2'],
-  'vlingo-maven-plugin-test': [version: '0.7.2'],
+             'vlingo-common': [version: '0.7.3'],
+             'vlingo-actors': [version: '0.7.3'],
+               'vlingo-wire': [version: '0.7.3'],
+            'vlingo-cluster': [version: '0.7.3'],
+            'vlingo-lattice': [version: '0.7.3'],
+          'vlingo-directory': [version: '0.7.3'],
+               'vlingo-http': [version: '0.7.3'],
+               'vlingo-auth': [version: '0.7.3'],
+             'vlingo-symbio': [version: '0.7.3'],
+    'vlingo-symbio-dynamodb': [version: '0.7.3'],
+       'vlingo-symbio-geode': [version: '0.7.3'],
+        'vlingo-symbio-jdbc': [version: '0.7.3'],
+          'vlingo-telemetry': [version: '0.7.3'],
+       'vlingo-maven-plugin': [version: '0.7.3'],
+  'vlingo-maven-plugin-test': [version: '0.7.3'],
 ]
 
 // simple run gradle or ./gradlew
