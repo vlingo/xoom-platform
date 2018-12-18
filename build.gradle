@@ -95,7 +95,6 @@ def withSubprojects(repos) {
           println "Found a subproject: ${subproject}"
         }
       }
-    return 
   }
   return moreRepos
 }
