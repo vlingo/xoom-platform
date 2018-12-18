@@ -10,4 +10,4 @@ before_script:
   - psql -c "CREATE USER vlingo_test WITH PASSWORD 'vlingo123' LOGIN NOSUPERUSER INHERIT CREATEDB NOCREATEROLE NOREPLICATION;" -U postgres
 script:
 - ./gradlew sync
-- mvn install
+- mvn -B install
