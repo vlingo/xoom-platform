@@ -10,7 +10,6 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <vlingo.version>0.7.5</vlingo.version>
   </properties>
 
   <build>
