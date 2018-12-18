@@ -47,7 +47,7 @@ task syncVersions {
   description 'synchronizes the repos and their dependency versions'
 
   doLast {
-    repos.each { repo, config ->
+    withSubprojects(repos).each { repo, config ->
       replaceVersionInTextFor repo, config
       syncPomVersionsFor repo, config, repos
     }
@@ -80,6 +80,29 @@ def cloneOrPull(repo) {
       def lastCommit = new JsonBuilder(grgit.log(maxCommits: 1).last()).toPrettyString()
       println "Last commit: $lastCommit"
 
+}
+
+def withSubprojects(repos) {
+  def moreRepos = repos
+  repos.each { repoName, repo ->
+    def subfoldersWithPom = []
+    // todo: functional instead of loops
+    file("$checkoutDir${repoName}")
+      .eachDirRecurse { subfolder ->
+        if (validRepo(subfolder)) {
+          def subproject = file(checkoutDir).relativePath(subfolder)
+          repos[subproject] = [version: repo.version]
+          println "Found a subproject: ${subproject}"
+        }
+      }
+    return 
+  }
+  return moreRepos
+}
+
+def validRepo(dir) {
+  return !dir.path.contains('.git') &&
+    new File(dir, "pom.xml").exists()
 }
 
 def replaceVersionInTextFor(repo, config) {
