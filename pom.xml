@@ -38,6 +38,7 @@
     <module>../vlingo-lattice</module>
     <module>../vlingo-telemetry</module>
     <module>../vlingo-maven-plugin</module>
+    <module>../vlingo-examples</module>
     <!-- ../vlingo-maven-plugin-test This module must test from its root directory -->
   </modules>
 
