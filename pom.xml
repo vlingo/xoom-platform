@@ -1,19 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.vlingo</groupId>
   <artifactId>vlingo-platform</artifactId>
-  <version>0.7.5</version>
+  <version>0.7.7</version>
   <packaging>pom</packaging>
-
   <name>vlingo-platform</name>
   <url>http://maven.apache.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -22,7 +19,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <modules>
     <module>../vlingo-common</module>
     <module>../vlingo-actors</module>
@@ -39,7 +35,5 @@
     <module>../vlingo-telemetry</module>
     <module>../vlingo-maven-plugin</module>
     <module>../vlingo-examples</module>
-    <!-- ../vlingo-maven-plugin-test This module must test from its root directory -->
   </modules>
-
 </project>

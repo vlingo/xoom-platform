@@ -10,6 +10,7 @@ ext.checkoutDir = '../'
 
 // this is the central desired version configuration for the vlingo platform
 ext.repos = [
+           'vlingo-platform': [version: '0.7.7'],
              'vlingo-common': [version: '0.7.7'],
              'vlingo-actors': [version: '0.7.7'],
                'vlingo-wire': [version: '0.7.7'],
