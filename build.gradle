@@ -10,7 +10,7 @@ ext.checkoutDir = '../'
 
 // this is the central desired version configuration for the vlingo platform
 ext.repos = [
-          //  'vlingo-platform': [version: '0.7.8'],
+           'vlingo-platform': [version: '0.7.8', skip_checkout: true], // special case: this repository
              'vlingo-common': [version: '0.7.8'],
              'vlingo-actors': [version: '0.7.8'],
                'vlingo-wire': [version: '0.7.8'],
@@ -37,9 +37,11 @@ task checkout {
   description 'checkout or update all vlingo repositories (commit changes to the repos beforehand)'
 
   doLast {
-    repos.each { repo, _config ->
-      cloneOrPull repo
-    }
+    repos
+      .findAll { _repo, config -> ! config.skip_checkout }
+      .each { repo, _config ->
+        cloneOrPull repo
+      }
   }
 }
 
