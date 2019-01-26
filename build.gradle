@@ -10,23 +10,24 @@ ext.checkoutDir = '../'
 
 // this is the central desired version configuration for the vlingo platform
 ext.repos = [
-           'vlingo-platform': [version: '0.7.9', skip_checkout: true], // special case: this repository
-             'vlingo-common': [version: '0.7.9'],
-             'vlingo-actors': [version: '0.7.9'],
-               'vlingo-wire': [version: '0.7.9'],
-            'vlingo-cluster': [version: '0.7.9'],
-          'vlingo-directory': [version: '0.7.9'],
-               'vlingo-http': [version: '0.7.9'],
-               'vlingo-auth': [version: '0.7.9'],
-             'vlingo-symbio': [version: '0.7.9'],
-    'vlingo-symbio-dynamodb': [version: '0.7.9'],
-       'vlingo-symbio-geode': [version: '0.7.9'],
-        'vlingo-symbio-jdbc': [version: '0.7.9'],
-            'vlingo-lattice': [version: '0.7.9'],
-          'vlingo-telemetry': [version: '0.7.9'],
-       'vlingo-maven-plugin': [version: '0.7.9'],
-  'vlingo-maven-plugin-test': [version: '0.7.9'],
-           'vlingo-examples': [version: '0.7.9'],
+           'vlingo-platform': [version: '0.8.0', skip_checkout: true], // special case: this repository
+             'vlingo-common': [version: '0.8.0'],
+             'vlingo-actors': [version: '0.8.0'],
+               'vlingo-wire': [version: '0.8.0'],
+            'vlingo-cluster': [version: '0.8.0'],
+          'vlingo-directory': [version: '0.8.0'],
+               'vlingo-http': [version: '0.8.0'],
+               'vlingo-auth': [version: '0.8.0'],
+             'vlingo-symbio': [version: '0.8.0'],
+    'vlingo-symbio-dynamodb': [version: '0.8.0'],
+       'vlingo-symbio-geode': [version: '0.8.0'],
+        'vlingo-symbio-jdbc': [version: '0.8.0'],
+            'vlingo-lattice': [version: '0.8.0'],
+           'vlingo-schemata': [version: '0.8.0'],
+          'vlingo-telemetry': [version: '0.8.0'],
+       'vlingo-maven-plugin': [version: '0.8.0'],
+  'vlingo-maven-plugin-test': [version: '0.8.0'],
+           'vlingo-examples': [version: '0.8.0'],
 ]
 
 // simple run gradle or ./gradlew
