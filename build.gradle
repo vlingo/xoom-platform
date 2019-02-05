@@ -10,24 +10,25 @@ ext.checkoutDir = '../'
 
 // this is the central desired version configuration for the vlingo platform
 ext.repos = [
-           'vlingo-platform': [version: '0.8.1', skip_checkout: true], // special case: this repository
-             'vlingo-common': [version: '0.8.1'],
-             'vlingo-actors': [version: '0.8.1'],
-               'vlingo-wire': [version: '0.8.1'],
-            'vlingo-cluster': [version: '0.8.1'],
-          'vlingo-directory': [version: '0.8.1'],
-               'vlingo-http': [version: '0.8.1'],
-               'vlingo-auth': [version: '0.8.1'],
-             'vlingo-symbio': [version: '0.8.1'],
-    'vlingo-symbio-dynamodb': [version: '0.8.1'],
-       'vlingo-symbio-geode': [version: '0.8.1'],
-        'vlingo-symbio-jdbc': [version: '0.8.1'],
-            'vlingo-lattice': [version: '0.8.1'],
-           'vlingo-schemata': [version: '0.8.1'],
-          'vlingo-telemetry': [version: '0.8.1'],
-       'vlingo-maven-plugin': [version: '0.8.1'],
-  'vlingo-maven-plugin-test': [version: '0.8.1'],
-           'vlingo-examples': [version: '0.8.1'],
+                    'vlingo-platform': [version: '0.8.1', skip_checkout: true], // special case: this repository
+                      'vlingo-common': [version: '0.8.1'],
+                      'vlingo-actors': [version: '0.8.1'],
+                        'vlingo-wire': [version: '0.8.1'],
+                     'vlingo-cluster': [version: '0.8.1'],
+                   'vlingo-directory': [version: '0.8.1'],
+                        'vlingo-http': [version: '0.8.1'],
+                        'vlingo-auth': [version: '0.8.1'],
+                      'vlingo-symbio': [version: '0.8.1'],
+             'vlingo-symbio-dynamodb': [version: '0.8.1'],
+                'vlingo-symbio-geode': [version: '0.8.1'],
+                 'vlingo-symbio-jdbc': [version: '0.8.1'],
+                     'vlingo-lattice': [version: '0.8.1'],
+   'vlingo-lattice-exchange-rabbitmq': [version: '0.8.1'],
+                    'vlingo-schemata': [version: '0.8.1'],
+                   'vlingo-telemetry': [version: '0.8.1'],
+                'vlingo-maven-plugin': [version: '0.8.1'],
+           'vlingo-maven-plugin-test': [version: '0.8.1'],
+                    'vlingo-examples': [version: '0.8.1'],
 ]
 
 // simple run gradle or ./gradlew
