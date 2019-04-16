@@ -26,8 +26,8 @@ ext.repos = [
    'vlingo-lattice-exchange-rabbitmq': [version: '0.8.3'],
                     'vlingo-schemata': [version: '0.8.3'],
                    'vlingo-telemetry': [version: '0.8.3'],
-                'vlingo-maven-plugin': [version: '0.8.3'],
-           'vlingo-maven-plugin-test': [version: '0.8.3'],
+               'vlingo-build-plugins': [version: '0.8.3'],
+          'vlingo-build-plugins-test': [version: '0.8.3'],
                     'vlingo-examples': [version: '0.8.3'],
 ]
 
