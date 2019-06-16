@@ -33,7 +33,7 @@
     <module>../vlingo-symbio-jdbc</module>
     <module>../vlingo-lattice</module>
     <module>../vlingo-telemetry</module>
-    <module>../vlingo-maven-plugin</module>
+    <module>../vlingo-build-plugins</module>
     <module>../vlingo-examples</module>
   </modules>
 </project>
