@@ -5,9 +5,14 @@ services:
   - postgresql
 addons:
   postgresql: "9.6"
+
 before_script:
   - psql -c "CREATE DATABASE vlingo_test;" -U postgres
   - psql -c "CREATE USER vlingo_test WITH PASSWORD 'vlingo123' LOGIN NOSUPERUSER INHERIT CREATEDB NOCREATEROLE NOREPLICATION;" -U postgres
+
 script:
 - ./gradlew checkout
-- mvn -B install
+- mvn -B install > build.log
+
+after_success: tail -n 1000 build.log
+after_failure: tail -n 3000 build.log
