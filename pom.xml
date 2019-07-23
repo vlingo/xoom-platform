@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.vlingo</groupId>
   <artifactId>vlingo-platform</artifactId>
-  <version>0.8.5</version>
+  <version>0.8.6</version>
   <packaging>pom</packaging>
   <name>vlingo-platform</name>
   <url>http://maven.apache.org</url>
@@ -29,11 +29,15 @@
     <module>../vlingo-auth</module>
     <module>../vlingo-symbio</module>
     <module>../vlingo-symbio-dynamodb</module>
+    <module>../vlingo-symbio-foundationdb</module>
     <module>../vlingo-symbio-geode</module>
     <module>../vlingo-symbio-jdbc</module>
     <module>../vlingo-lattice</module>
+    <module>../vlingo-lattice-exchange-rabbitmq</module>
+    <module>../vlingo-schemata</module>
     <module>../vlingo-telemetry</module>
     <module>../vlingo-build-plugins</module>
+    <module>../vlingo-build-plugins-test</module>
     <module>../vlingo-examples</module>
   </modules>
 </project>
