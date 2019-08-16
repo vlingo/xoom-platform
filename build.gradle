@@ -10,25 +10,25 @@ ext.checkoutDir = '../'
 
 // this is the central desired version configuration for the vlingo platform
 ext.repos = [
-                    'vlingo-platform': [version: '0.8.6', skip_checkout: true], // special case: this repository
-                      'vlingo-common': [version: '0.8.6'],
-                      'vlingo-actors': [version: '0.8.6'],
-                        'vlingo-wire': [version: '0.8.6'],
-                     'vlingo-cluster': [version: '0.8.6'],
-                   'vlingo-directory': [version: '0.8.6'],
-                        'vlingo-http': [version: '0.8.6'],
-                        'vlingo-auth': [version: '0.8.6'],
-                      'vlingo-symbio': [version: '0.8.6'],
-             'vlingo-symbio-dynamodb': [version: '0.8.6'],
-                'vlingo-symbio-geode': [version: '0.8.6'],
-                 'vlingo-symbio-jdbc': [version: '0.8.6'],
-                     'vlingo-lattice': [version: '0.8.6'],
-   'vlingo-lattice-exchange-rabbitmq': [version: '0.8.6'],
-                    'vlingo-schemata': [version: '0.8.6'],
-                   'vlingo-telemetry': [version: '0.8.6'],
-               'vlingo-build-plugins': [version: '0.8.6'],
-          'vlingo-build-plugins-test': [version: '0.8.6'],
-                    'vlingo-examples': [version: '0.8.6'],
+                    'vlingo-platform': [version: '0.8.7', skip_checkout: true], // special case: this repository
+                      'vlingo-common': [version: '0.8.7'],
+                      'vlingo-actors': [version: '0.8.7'],
+                        'vlingo-wire': [version: '0.8.7'],
+                     'vlingo-cluster': [version: '0.8.7'],
+                   'vlingo-directory': [version: '0.8.7'],
+                        'vlingo-http': [version: '0.8.7'],
+                        'vlingo-auth': [version: '0.8.7'],
+                      'vlingo-symbio': [version: '0.8.7'],
+             'vlingo-symbio-dynamodb': [version: '0.8.7'],
+                'vlingo-symbio-geode': [version: '0.8.7'],
+                 'vlingo-symbio-jdbc': [version: '0.8.7'],
+                     'vlingo-lattice': [version: '0.8.7'],
+   'vlingo-lattice-exchange-rabbitmq': [version: '0.8.7'],
+                    'vlingo-schemata': [version: '0.8.7'],
+                   'vlingo-telemetry': [version: '0.8.7'],
+               'vlingo-build-plugins': [version: '0.8.7'],
+          'vlingo-build-plugins-test': [version: '0.8.7'],
+                    'vlingo-examples': [version: '0.8.7'],
 ]
 
 // simple run gradle or ./gradlew
