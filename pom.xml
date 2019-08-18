@@ -37,7 +37,6 @@
     <module>../vlingo-schemata</module>
     <module>../vlingo-telemetry</module>
     <module>../vlingo-build-plugins</module>
-    <module>../vlingo-build-plugins-test</module>
     <module>../vlingo-examples</module>
   </modules>
 </project>
