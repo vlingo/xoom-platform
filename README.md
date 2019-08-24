@@ -2,14 +2,16 @@
 
 [![Build Status](https://travis-ci.org/vlingo/vlingo-platform.svg?branch=master)](https://travis-ci.org/vlingo/vlingo-platform) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/vlingo-platform-java/community)
 
+The vlingo/PLATFORM  central "build all" and other control.
+
 [Official vlingo/platform website](https://vlingo.io/).
 
-Provides vlingo/platform central "build all" and other control. [Read about the vlingo/platform](https://kalele.io/blog-posts/vlingo-platform/) and about [its architecture](https://kalele.io/blog-posts/vlingo-platform-architecture-part1/).
+[Read about the vlingo/platform](https://kalele.io/blog-posts/vlingo-platform/) and about [its architecture](https://kalele.io/blog-posts/vlingo-platform-architecture-part1/).
 
-Use "mvn install" from here with the pom.xml and the entire platform to build.
+Use "mvn clean install" from here with the pom.xml and the entire platform to build.
 
 ```
-console:vlingo-platform> mvn install
+console:vlingo-platform> mvn clean install
 ```
 
 ## Maintaining the Libraries
