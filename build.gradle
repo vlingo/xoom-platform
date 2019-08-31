@@ -10,29 +10,30 @@ ext.checkoutDir = '../'
 
 // this is the central desired version configuration for the vlingo platform
 ext.repos = [
-                    'vlingo-platform': [version: '0.8.7', skip_checkout: true], // special case: this repository
-                      'vlingo-common': [version: '0.8.7'],
-                      'vlingo-actors': [version: '0.8.7'],
-                        'vlingo-wire': [version: '0.8.7'],
-                     'vlingo-cluster': [version: '0.8.7'],
-                   'vlingo-directory': [version: '0.8.7'],
-                        'vlingo-http': [version: '0.8.7'],
-                        'vlingo-auth': [version: '0.8.7'],
-                      'vlingo-symbio': [version: '0.8.7'],
-             'vlingo-symbio-dynamodb': [version: '0.8.7'],
-                'vlingo-symbio-geode': [version: '0.8.7'],
-                 'vlingo-symbio-jdbc': [version: '0.8.7'],
-                     'vlingo-lattice': [version: '0.8.7'],
-   'vlingo-lattice-exchange-rabbitmq': [version: '0.8.7'],
-                    'vlingo-schemata': [version: '0.8.7'],
-                   'vlingo-telemetry': [version: '0.8.7'],
-               'vlingo-build-plugins': [version: '0.8.7'],
-          'vlingo-build-plugins-test': [version: '0.8.7'],
-                    'vlingo-examples': [version: '0.8.7'],
+                    'vlingo-platform': [version: '0.8.8', skip_checkout: true], // special case: this repository
+                      'vlingo-common': [version: '0.8.8'],
+                      'vlingo-actors': [version: '0.8.8'],
+                        'vlingo-wire': [version: '0.8.8'],
+                     'vlingo-cluster': [version: '0.8.8'],
+                   'vlingo-directory': [version: '0.8.8'],
+                        'vlingo-http': [version: '0.8.8'],
+                        'vlingo-auth': [version: '0.8.8'],
+                      'vlingo-symbio': [version: '0.8.8'],
+             'vlingo-symbio-dynamodb': [version: '0.8.8'],
+                'vlingo-symbio-geode': [version: '0.8.8'],
+                 'vlingo-symbio-jdbc': [version: '0.8.8'],
+                     'vlingo-lattice': [version: '0.8.8'],
+   'vlingo-lattice-exchange-rabbitmq': [version: '0.8.8'],
+                    'vlingo-schemata': [version: '0.8.8'],
+                   'vlingo-telemetry': [version: '0.8.8'],
+               'vlingo-build-plugins': [version: '0.8.8'],
+          'vlingo-build-plugins-test': [version: '0.8.8'],
+                    'vlingo-examples': [version: '0.8.8'],
 ]
 
 // simple run gradle or ./gradlew
 defaultTasks 'sync'
+
 
 // first do this
 task checkout {
@@ -65,6 +66,45 @@ task sync(dependsOn: [
   syncVersions,
 ]) {
   description 'perform all maintenance actions at once'
+}
+
+// when releasing:
+//
+// ISSUE: Currently no way to get credentials passed correctly to open()
+// so don't push. Use the following from the root of the repositories.
+//
+//
+// #!/bin/bash
+// find . -maxdepth 1 -mindepth 1 -name "vlingo-*" | sort | while read f
+// do
+//     echo "---------------------------------"
+//     echo $f
+//     echo "---------------------------------"
+//     cd $f
+//     git push 2>/dev/null
+//     echo ""
+//     cd ..
+// 
+// Note: The skip_checkout is used because vlingo-platform should be
+// release separately (and in last order).
+//
+task pushRelease {
+  description 'add, commit, and push all listed vlingo repositories with current version'
+
+  repos
+  .findAll { candidateRepo, candidateConfig -> ! candidateConfig.skip_checkout }
+  .each { repo, config ->
+    println "Releasing $repo as $config.version"
+    
+    def dir = "$checkoutDir$repo"
+    def commitMessage = "Update to version $config.version"
+    
+    grgit = org.ajoberstar.grgit.Grgit.open(dir: dir)
+    grgit.add(patterns: ["README.md", "bintray.json", "pom.xml"])
+    grgit.commit(message: commitMessage)
+    // grgit.push()
+    grgit.close()
+  }
 }
 
 def cloneOrPull(repo) {
