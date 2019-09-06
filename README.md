@@ -31,6 +31,8 @@ So, to check out and build all `vlingo-platform modules`, do the following:
 $ cd <my-projects-root-directory>
 $ md vlingo
 $ cd vlingo
+$ git clone git@github.com:vlingo/vlingo-platform.git
+$ cd vlingo-platform
 $ ./gradlew
 $ cd ../vlingo-symbio-jdbc && ./pgbounce.sh && cd ../vlingo-platform
 $ cd ../vlingo-lattice-exchange-rabbitmq && ./rmqbounce.sh && cd ../vlingo-platform
