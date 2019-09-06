@@ -29,7 +29,7 @@ So, to check out and build all `vlingo-platform modules`, do the following:
 
 ```
 $ cd <my-projects-root-directory>
-$ md vlingo
+$ mkdir vlingo
 $ cd vlingo
 $ git clone git@github.com:vlingo/vlingo-platform.git
 $ cd vlingo-platform
