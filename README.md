@@ -8,6 +8,18 @@ The vlingo/PLATFORM  central "build all" and other control.
 
 [Read about the vlingo/platform](https://kalele.io/blog-posts/vlingo-platform/) and about [its architecture](https://kalele.io/blog-posts/vlingo-platform-architecture-part1/).
 
+
+## Getting started
+
+Prerequisites:
+* Java JDK 8
+
+To check out all `vlingo-platform` modules, ...
+* ... create a parent directory to hold all your `vlingo` repos
+* ... `cd` into the new repo
+* ... run `./gradlew` to clone all module repositories
+
+
 Use "mvn clean install" from here with the pom.xml and the entire platform to build.
 
 ```
