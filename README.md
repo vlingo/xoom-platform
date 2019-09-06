@@ -13,17 +13,26 @@ The vlingo/PLATFORM  central "build all" and other control.
 
 Prerequisites:
 * Java JDK 8
+* Docker & docker-compose
 
 To check out all `vlingo-platform` modules, ...
 * ... create a parent directory to hold all your `vlingo` repos
 * ... `cd` into the new repo
 * ... run `./gradlew` to clone all module repositories
 
+To build the complete platform ...
+* ... start the test PostgreSQL DB container (`vlingo-symbio-jdbc`) by running `docker-compose -f ../vlingo-symbio-jdbc/docker-compose.yaml up -d`
+* ... start the RabbitMQ container (`vlingo-lattice-exchange-rabbitmq`):  `docker compose -f ../vlingo-lattice-exchange-rabbitmq/docker-compose.yml up -d`
+* ... Use "mvn clean install" from here with the pom.xml and the entire platform to build.
 
-Use "mvn clean install" from here with the pom.xml and the entire platform to build.
 
 ```
-console:vlingo-platform> mvn clean install
+$ md vlingo
+$ cd vlingo
+$ ./gradlew
+$ docker-compose -f ../vlingo-symbio-jdbc/docker-compose.yaml up -d
+$ docker compose -f ../vlingo-lattice-exchange-rabbitmq/docker-compose.yml up -d
+$ mvn clean install
 ```
 
 ## Maintaining the Libraries
