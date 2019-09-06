@@ -20,6 +20,7 @@ ext.repos = [
                         'vlingo-auth': [version: '0.8.8'],
                       'vlingo-symbio': [version: '0.8.8'],
              'vlingo-symbio-dynamodb': [version: '0.8.8'],
+         'vlingo-symbio-foundationdb': [version: '0.8.8'],
                 'vlingo-symbio-geode': [version: '0.8.8'],
                  'vlingo-symbio-jdbc': [version: '0.8.8'],
                      'vlingo-lattice': [version: '0.8.8'],
