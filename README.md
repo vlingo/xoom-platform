@@ -21,19 +21,21 @@ To check out all `vlingo-platform` modules, ...
 * ... run `./gradlew` to clone all module repositories
 
 To build the complete platform ...
-* ... start the test PostgreSQL DB container (`vlingo-symbio-jdbc`) by running `docker-compose -f ../vlingo-symbio-jdbc/docker-compose.yaml up -d`
-* ... start the RabbitMQ container (`vlingo-lattice-exchange-rabbitmq`):  `docker compose -f ../vlingo-lattice-exchange-rabbitmq/docker-compose.yml up -d`
-* ... Use "mvn clean install" from here with the pom.xml and the entire platform to build.
-
+* ... start a PostgreSQL DB container (`vlingo-symbio-jdbc`) by running `cd ../vlingo-symbio-jdbc && ./pgbounce.sh && cd ../vlingo-platform`
+* ... start a RabbitMQ container (`vlingo-lattice-exchange-rabbitmq`):  `cd ../vlingo-lattice-exchange-rabbitmq && ./rmqbounce.sh && cd ../vlingo-platform`
+* ... run `./mvnw clean install` to run all tests and build all artifacts
 
 ```
 $ md vlingo
 $ cd vlingo
 $ ./gradlew
-$ docker-compose -f ../vlingo-symbio-jdbc/docker-compose.yaml up -d
-$ docker compose -f ../vlingo-lattice-exchange-rabbitmq/docker-compose.yml up -d
-$ mvn clean install
+$ cd ../vlingo-symbio-jdbc && ./pgbounce.sh && cd ../vlingo-platform
+$ cd ../vlingo-lattice-exchange-rabbitmq && ./rmqbounce.sh && cd ../vlingo-platform
+$ ./mvnw clean install
 ```
+
+Note that the tests of the experimental `vlingo-symbio-foundationdb` module are currently skipped in the platform build. 
+Please refer to its README for building and testing details.
 
 ## Maintaining the Libraries
 
