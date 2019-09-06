@@ -29,7 +29,7 @@
     <module>../vlingo-auth</module>
     <module>../vlingo-symbio</module>
     <module>../vlingo-symbio-dynamodb</module>
-    <module>../vlingo-symbio-foundationdb</module>
+    <!-- <module>../vlingo-symbio-foundationdb</module> -->
     <module>../vlingo-symbio-geode</module>
     <module>../vlingo-symbio-jdbc</module>
     <module>../vlingo-lattice</module>

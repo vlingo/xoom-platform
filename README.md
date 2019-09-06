@@ -8,11 +8,39 @@ The vlingo/PLATFORM  central "build all" and other control.
 
 [Read about the vlingo/platform](https://kalele.io/blog-posts/vlingo-platform/) and about [its architecture](https://kalele.io/blog-posts/vlingo-platform-architecture-part1/).
 
-Use "mvn clean install" from here with the pom.xml and the entire platform to build.
+
+## Getting started
+
+Prerequisites:
+* Java JDK 8
+* Docker & docker-compose
+
+To check out all `vlingo-platform` modules, ...
+* ... create a parent directory to hold all your `vlingo` repos
+* ... `cd` into the new repo
+* ... run `./gradlew` to clone all module repositories
+
+To build the complete platform ...
+* ... start a PostgreSQL DB container (`vlingo-symbio-jdbc`) by running `cd ../vlingo-symbio-jdbc && ./pgbounce.sh && cd ../vlingo-platform`
+* ... start a RabbitMQ container (`vlingo-lattice-exchange-rabbitmq`):  `cd ../vlingo-lattice-exchange-rabbitmq && ./rmqbounce.sh && cd ../vlingo-platform`
+* ... run `./mvnw clean install` to run all tests and build all artifacts
+
+So, to check out and build all `vlingo-platform modules`, do the following:
 
 ```
-console:vlingo-platform> mvn clean install
+$ cd <my-projects-root-directory>
+$ mkdir vlingo
+$ cd vlingo
+$ git clone git@github.com:vlingo/vlingo-platform.git
+$ cd vlingo-platform
+$ ./gradlew
+$ cd ../vlingo-symbio-jdbc && ./pgbounce.sh && cd ../vlingo-platform
+$ cd ../vlingo-lattice-exchange-rabbitmq && ./rmqbounce.sh && cd ../vlingo-platform
+$ ./mvnw clean install
 ```
+
+Note that the tests of the experimental `vlingo-symbio-foundationdb` module are currently skipped in the platform build. 
+Please refer to its README for building and testing details.
 
 ## Maintaining the Libraries
 
