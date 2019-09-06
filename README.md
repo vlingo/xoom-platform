@@ -25,7 +25,10 @@ To build the complete platform ...
 * ... start a RabbitMQ container (`vlingo-lattice-exchange-rabbitmq`):  `cd ../vlingo-lattice-exchange-rabbitmq && ./rmqbounce.sh && cd ../vlingo-platform`
 * ... run `./mvnw clean install` to run all tests and build all artifacts
 
+So, to check out and build all `vlingo-platform modules`, do the following:
+
 ```
+$ cd <my-projects-root-directory>
 $ md vlingo
 $ cd vlingo
 $ ./gradlew
