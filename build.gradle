@@ -6,7 +6,7 @@ plugins {
 }
 
 ext.githubUri = 'https://github.com/vlingo/'
-ext.checkoutDir = '/Users/wwerner/Projects/vlingo/'
+ext.checkoutDir = projectDir.parent
 
 // this is the central desired version configuration for the vlingo platform
 ext.repos = [
@@ -95,7 +95,7 @@ task pushRelease {
   .each { repo, config ->
     println "Releasing $repo as $config.version"
     
-    def dir = "$checkoutDir$repo"
+    def dir = "$checkoutDir/$repo"
     def commitMessage = "Update to version $config.version"
     
     grgit = org.ajoberstar.grgit.Grgit.open(dir: dir)
@@ -109,7 +109,7 @@ task pushRelease {
 def cloneOrPull(repo) {
       def grgit
 
-      def dir = "$checkoutDir$repo"
+      def dir = "$checkoutDir/$repo"
       def uri = "$githubUri$repo"
 
       if (!file(dir).exists()) {
@@ -131,7 +131,7 @@ def withSubprojects(repos) {
   repos.each { repoName, repo ->
     def subfoldersWithPom = []
     // todo: functional instead of loops
-    file("$checkoutDir${repoName}")
+    file("$checkoutDir/${repoName}")
       .eachDirRecurse { subfolder ->
         if (validRepo(subfolder)) {
           def subproject = file(checkoutDir).relativePath(subfolder)
@@ -149,7 +149,7 @@ def validRepo(dir) {
 }
 
 def replaceVersionInTextFor(repo, config) {
-  def dir = "$checkoutDir$repo"
+  def dir = "$checkoutDir/$repo"
   def replacementSets = [
     [name: 'README.md', versionRegex: /(<version>)(\S+)(<\/version>)/, replacement: "\\1${config.version}\\3"],
     [name: 'README.md', versionRegex: /(compile.*\:)(\S+)(\')/, replacement: "\\1${config.version}\\3"],
@@ -176,7 +176,7 @@ def replaceVersionInTextFor(repo, config) {
 }
 
 def syncPomVersionsFor(repo, config, repos) {
-  def pom = "$checkoutDir${repo}/pom.xml"
+  def pom = "$checkoutDir/${repo}/pom.xml"
   def xml = file(pom).text
   def root = new XmlParser().parseText(xml)
  
