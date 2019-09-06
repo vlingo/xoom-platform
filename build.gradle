@@ -6,7 +6,7 @@ plugins {
 }
 
 ext.githubUri = 'https://github.com/vlingo/'
-ext.checkoutDir = '../'
+ext.checkoutDir = '/Users/wwerner/Projects/vlingo/'
 
 // this is the central desired version configuration for the vlingo platform
 ext.repos = [
@@ -39,13 +39,11 @@ defaultTasks 'sync'
 task checkout {
   description 'checkout or update all vlingo repositories (commit changes to the repos beforehand)'
 
-  doLast {
     repos
       .findAll { _repo, config -> ! config.skip_checkout }
       .each { repo, _config ->
         cloneOrPull repo
       }
-  }
 }
 
 // then that
