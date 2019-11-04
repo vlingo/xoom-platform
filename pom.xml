@@ -34,7 +34,6 @@
     <module>../vlingo-lattice</module>
     <module>../vlingo-lattice-exchange-rabbitmq</module>
     <module>../vlingo-telemetry</module>
-    <module>../vlingo-zoom</module>
     <module>../vlingo-build-plugins</module>
     <module>../vlingo-examples</module>
   </modules>

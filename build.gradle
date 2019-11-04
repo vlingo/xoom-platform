@@ -27,7 +27,7 @@ ext.repos = [
    'vlingo-lattice-exchange-rabbitmq': [version: '0.9.1-RC2'],
                     'vlingo-schemata': [version: '0.9.1-RC2'],
                    'vlingo-telemetry': [version: '0.9.1-RC2'],
-                        'vlingo-zoom': [version: '0.9.1-RC2'],
+//                        'vlingo-zoom': [version: '0.9.1-RC2'],
                'vlingo-build-plugins': [version: '0.9.1-RC2'],
           'vlingo-build-plugins-test': [version: '0.9.1-RC2'],
                     'vlingo-examples': [version: '0.9.1-RC2'],
