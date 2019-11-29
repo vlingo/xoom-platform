@@ -10,27 +10,27 @@ ext.checkoutDir = projectDir.parent
 
 // this is the central desired version configuration for the vlingo platform
 ext.repos = [
-                    'vlingo-platform': [version: '0.9.1-RC2', skip_checkout: true], // special case: this repository
-                      'vlingo-common': [version: '0.9.1-RC2'],
-                      'vlingo-actors': [version: '0.9.1-RC2'],
-                        'vlingo-wire': [version: '0.9.1-RC2'],
-                     'vlingo-cluster': [version: '0.9.1-RC2'],
-                   'vlingo-directory': [version: '0.9.1-RC2'],
-                        'vlingo-http': [version: '0.9.1-RC2'],
-                        'vlingo-auth': [version: '0.9.1-RC2'],
-                      'vlingo-symbio': [version: '0.9.1-RC2'],
-             'vlingo-symbio-dynamodb': [version: '0.9.1-RC2'],
-                'vlingo-symbio-geode': [version: '0.9.1-RC2'],
-                 'vlingo-symbio-jdbc': [version: '0.9.1-RC2'],
-                     'vlingo-lattice': [version: '0.9.1-RC2'],
-      'vlingo-lattice-exchange-camel': [version: '0.9.1-RC2'],
-   'vlingo-lattice-exchange-rabbitmq': [version: '0.9.1-RC2'],
-                    'vlingo-schemata': [version: '0.9.1-RC2'],
-                   'vlingo-telemetry': [version: '0.9.1-RC2'],
-//                        'vlingo-zoom': [version: '0.9.1-RC2'],
-               'vlingo-build-plugins': [version: '0.9.1-RC2'],
-          'vlingo-build-plugins-test': [version: '0.9.1-RC2'],
-                    'vlingo-examples': [version: '0.9.1-RC2'],
+                    'vlingo-platform': [version: '0.9.2-RC3', skip_checkout: true], // special case: this repository
+                      'vlingo-common': [version: '0.9.2-RC3'],
+                      'vlingo-actors': [version: '0.9.2-RC3'],
+                        'vlingo-wire': [version: '0.9.2-RC3'],
+                     'vlingo-cluster': [version: '0.9.2-RC3'],
+                   'vlingo-directory': [version: '0.9.2-RC3'],
+                        'vlingo-http': [version: '0.9.2-RC3'],
+                        'vlingo-auth': [version: '0.9.2-RC3'],
+                      'vlingo-symbio': [version: '0.9.2-RC3'],
+             'vlingo-symbio-dynamodb': [version: '0.9.2-RC3'],
+                'vlingo-symbio-geode': [version: '0.9.2-RC3'],
+                 'vlingo-symbio-jdbc': [version: '0.9.2-RC3'],
+                     'vlingo-lattice': [version: '0.9.2-RC3'],
+      'vlingo-lattice-exchange-camel': [version: '0.9.2-RC3'],
+   'vlingo-lattice-exchange-rabbitmq': [version: '0.9.2-RC3'],
+                    'vlingo-schemata': [version: '0.9.2-RC3'],
+                   'vlingo-telemetry': [version: '0.9.2-RC3'],
+//                      'vlingo-xoom': [version: '0.9.2-RC3'],
+               'vlingo-build-plugins': [version: '0.9.2-RC3'],
+          'vlingo-build-plugins-test': [version: '0.9.2-RC3'],
+                    'vlingo-examples': [version: '0.9.2-RC3'],
 ]
 
 // simple run gradle or ./gradlew
