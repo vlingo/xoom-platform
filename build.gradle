@@ -13,6 +13,8 @@ ext.repos = [
                     'vlingo-platform': [version: '1.0.0', skip_checkout: true], // special case: this repository
                       'vlingo-common': [version: '1.0.0'],
                       'vlingo-actors': [version: '1.0.0'],
+                     'vlingo-streams': [version: '1.0.0'],
+                 'vlingo-streams-tck': [version: '1.0.0'],
                         'vlingo-wire': [version: '1.0.0'],
                      'vlingo-cluster': [version: '1.0.0'],
                    'vlingo-directory': [version: '1.0.0'],
