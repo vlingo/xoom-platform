@@ -1,5 +1,4 @@
-import groovy.json.*
-import groovy.xml.XmlUtil
+import groovy.json.JsonBuilder
 
 plugins {
   id 'org.ajoberstar.grgit' version '1.7.2'
