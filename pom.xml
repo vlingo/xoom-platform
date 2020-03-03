@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.vlingo</groupId>
   <artifactId>vlingo-platform</artifactId>
-  <version>1.2.6</version>
+  <version>1.2.7</version>
   <packaging>pom</packaging>
   <name>vlingo-platform</name>
   <url>http://maven.apache.org</url>
@@ -35,8 +35,10 @@
     <module>../vlingo-lattice</module>
     <module>../vlingo-lattice-exchange-camel</module>
     <module>../vlingo-lattice-exchange-rabbitmq</module>
+    <module>../vlingo-xoom-data</module>
+    <module>../vlingo-xoom-server</module>
     <module>../vlingo-telemetry</module>
     <module>../vlingo-build-plugins</module>
-    <module>../vlingo-examples</module>
+    <!-- module>../vlingo-examples</module -->
   </modules>
 </project>
