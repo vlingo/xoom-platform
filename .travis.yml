@@ -1,20 +1,12 @@
 language: java
-install:
-- true # nothing to assemble
-services:
-  - postgresql
-addons:
-  postgresql: "9.6"
+dist: trusty
 
-before_script:
-  - psql -c "CREATE DATABASE vlingo_test;" -U postgres
-  - psql -c "CREATE USER vlingo_test WITH PASSWORD 'vlingo123' LOGIN NOSUPERUSER INHERIT CREATEDB NOCREATEROLE NOREPLICATION;" -U postgres
+before_deploy:
+  chmod u+x .travis/trigger_deps.sh
 
-script:
-- ./gradlew checkout
-- mvn -B install &> build.log
-
-after_success:
-- tail -n 1000 build.log
-after_failure:
-- tail -n 3000 build.log
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: .travis/trigger_deps.sh
+  on:
+    tags: true

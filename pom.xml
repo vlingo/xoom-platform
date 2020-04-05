@@ -2,55 +2,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.vlingo</groupId>
   <artifactId>vlingo-platform</artifactId>
-  <version>1.2.9</version>
+
+  <!-- Latest released version. Commit new version for release of projects from PLATFORM -->
+  <!-- Only semantic versions are supported (i.e. x.y.z) -->
+  <version>1.2.16</version>
+
   <packaging>pom</packaging>
   <name>vlingo-platform</name>
   <url>http://maven.apache.org</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-json</artifactId>
-      <version>2.4.15</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-xml</artifactId>
-      <version>2.4.15</version>
-      <scope>compile</scope>
-    </dependency>
-  </dependencies>
-  <modules>
-    <module>../vlingo-common</module>
-    <module>../vlingo-actors</module>
-    <module>../vlingo-streams</module>
-    <module>../vlingo-wire</module>
-    <module>../vlingo-cluster</module>
-    <module>../vlingo-directory</module>
-    <module>../vlingo-http</module>
-    <module>../vlingo-auth</module>
-    <module>../vlingo-symbio</module>
-    <module>../vlingo-symbio-dynamodb</module>
-    <module>../vlingo-symbio-geode</module>
-    <module>../vlingo-symbio-jdbc</module>
-    <module>../vlingo-lattice</module>
-    <module>../vlingo-lattice-exchange-camel</module>
-    <module>../vlingo-lattice-exchange-rabbitmq</module>
-    <module>../vlingo-xoom-data</module>
-    <module>../vlingo-xoom-server</module>
-    <module>../vlingo-telemetry</module>
-    <module>../vlingo-build-plugins</module>
-    <module>../vlingo-examples</module>
-  </modules>
 </project>
