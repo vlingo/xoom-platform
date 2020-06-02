@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.org/vlingo/vlingo-platform.svg?branch=master)](https://travis-ci.org/vlingo/vlingo-platform) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/vlingo-platform-java/community)
 
-The vlingo/PLATFORM  central "build all" and other control.
+The VLINGO/PLATFORM central "build all" and other control.
+
+Docs: https://docs.vlingo.io/
 
 [Official vlingo/platform website](https://vlingo.io/).
 
