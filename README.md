@@ -17,33 +17,6 @@ Prerequisites:
 * Java JDK 8
 * Docker & docker-compose
 
-To check out all `vlingo-platform` modules, ...
-* ... create a parent directory to hold all your `vlingo` repos
-* ... `cd` into the new repo
-* ... run `./gradlew` to clone all module repositories
-
-To build the complete platform ...
-* ... start a PostgreSQL DB container (`vlingo-symbio-jdbc`) by running `cd ../vlingo-symbio-jdbc && ./pgbounce.sh && cd ../vlingo-platform`
-* ... start a RabbitMQ container (`vlingo-lattice-exchange-rabbitmq`):  `cd ../vlingo-lattice-exchange-rabbitmq && ./rmqbounce.sh && cd ../vlingo-platform`
-* ... run `./mvnw clean install` to run all tests and build all artifacts
-
-So, to check out and build all `vlingo-platform modules`, do the following:
-
-```
-$ cd <my-projects-root-directory>
-$ mkdir vlingo
-$ cd vlingo
-$ git clone git@github.com:vlingo/vlingo-platform.git
-$ cd vlingo-platform
-$ ./gradlew
-$ cd ../vlingo-symbio-jdbc && ./pgbounce.sh && cd ../vlingo-platform
-$ cd ../vlingo-lattice-exchange-rabbitmq && ./rmqbounce.sh && cd ../vlingo-platform
-$ ./mvnw clean install
-```
-
-Note that the tests of the experimental `vlingo-symbio-foundationdb` module are currently skipped in the platform build. 
-Please refer to its README for building and testing details.
-
 ## Maintaining the Libraries
 
 ### Synchronizing Library Versions
@@ -67,6 +40,15 @@ You get your Bintray API key from your Bintray user user profile:
 ```
   Username-drop-menu > Edit Profile > API Key (left bar menu)
 ```
+
+### Creating a New Travis Build Push to Bintray Package
+
+- Repository Settings for Travis
+-- Example: https://travis-ci.org/github/vlingo/vlingo-xoom/settings
+-- `BINTRAY_USERNAME` - Your Bintray user account name
+-- `BINTRAY_PASSWORD` - Your Bintray user **API Key**, **NOT** your Bintray user account password
+-- `GITHUB_TOKEN` - Use the token on the VLINGO org
+
 
 ## Deployment to Pivotal Cloud Foundry
 
