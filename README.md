@@ -1,4 +1,4 @@
-# vlingo-platform
+# VLINGO/PLATFORM
 
 [![Build Status](https://travis-ci.org/vlingo/vlingo-platform.svg?branch=master)](https://travis-ci.org/vlingo/vlingo-platform) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/vlingo-platform-java/community)
 
@@ -6,15 +6,15 @@ The VLINGO/PLATFORM central "build all" and other control.
 
 Docs: https://docs.vlingo.io/
 
-[Official vlingo/platform website](https://vlingo.io/).
+[Official VLINGO/PLATFORM website](https://vlingo.io/).
 
-[Read about the vlingo/platform](https://kalele.io/blog-posts/vlingo-platform/) and about [its architecture](https://kalele.io/blog-posts/vlingo-platform-architecture-part1/).
+[Read about the VLINGO/PLATFORM](https://docs.vlingo.io/) and about [its architecture](https://docs.vlingo.io/architecture).
 
 
 ## Getting started
 
 Prerequisites:
-* Java JDK 8
+* Java JDK 8 or higher
 * Docker & docker-compose
 
 ## Maintaining the Libraries
