@@ -1,4 +1,4 @@
-# The vlingo/PLATFORM release process is as follows:
+# The VLINGO/PLATFORM release process is as follows:
 
 1. `cd vlingo-platform`
 2. edit `pom.xml` -- update the version; this version will be released (e.g. 1.2.3)
