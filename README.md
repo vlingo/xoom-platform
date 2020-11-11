@@ -14,7 +14,7 @@ Docs: https://docs.vlingo.io/
 ## Getting started
 
 Prerequisites:
-* Java JDK 8 or higher
+* Java JDK 8 or greater
 * Docker & docker-compose
 
 ## Maintaining the Libraries
