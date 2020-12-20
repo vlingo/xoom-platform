@@ -21,7 +21,7 @@ Prerequisites:
 
 See [RELEASE_HOW_TO](RELEASE_HOW_TO.md) for the release process.
 
-### Creating a New Travis Build Push to Bintray Package
+### Build configuration
 
 - GitHub Organisation secrets
 -- `BINTRAY_USERNAME` - Your Bintray user account name
