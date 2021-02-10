@@ -10,45 +10,30 @@ Docs: https://docs.vlingo.io/
 
 [Read about the VLINGO/PLATFORM](https://docs.vlingo.io/) and about [its architecture](https://docs.vlingo.io/architecture).
 
-
 ## Getting started
 
 Prerequisites:
 * Java JDK 8 or greater
-* Docker & docker-compose
 
 ## Maintaining the Libraries
 
-### Synchronizing Library Versions
+### Release process
 
-- see [build.gradle](build.gradle) for the list of repos, versions and replacement regexes
-- adjust the config
-- if the directories are checked out already next to this repo, make sure, the right branches (`master`) are checked out, and all changes are committed
-- run `gradle` or `./gradlew`
-- alternatively, run `gradle syncVersions` without checking out automatically
-- review and commit the repos
+See [RELEASE_HOW_TO](RELEASE_HOW_TO.md) for the release process.
 
-### Travis to Bintray
+### Build configuration
 
-Create a `.travis.yml` file with build statements. You must create a `deploy.key` in this file using the following command-line tool:
+- GitHub Organisation secrets
+-- `BINTRAY_USERNAME` - Your Bintray user account name
+-- `BINTRAY_PASSWORD` - Your Bintray user **API Key**, **NOT** your Bintray user account password
+-- `RELEASE_GITHUB_TOKEN` - Use the token on the VLINGO org
+-- `SLACK_WEBHOOK` - Webhook for slack notifications, can be generated [here](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks)
 
-```
-travis encrypt <YOUR BINTRAY API KEY> --add deploy.key
-```
-You get your Bintray API key from your Bintray user user profile:
+The Bintray API key can be obtained from your Bintray user profile:
 
 ```
   Username-drop-menu > Edit Profile > API Key (left bar menu)
 ```
-
-### Creating a New Travis Build Push to Bintray Package
-
-- Repository Settings for Travis
--- Example: https://travis-ci.org/github/vlingo/vlingo-xoom/settings
--- `BINTRAY_USERNAME` - Your Bintray user account name
--- `BINTRAY_PASSWORD` - Your Bintray user **API Key**, **NOT** your Bintray user account password
--- `GITHUB_TOKEN` - Use the token on the VLINGO org
-
 
 ## Deployment to Pivotal Cloud Foundry
 
