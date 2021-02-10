@@ -24,10 +24,10 @@ See [RELEASE_HOW_TO](RELEASE_HOW_TO.md) for the release process.
 ### Build configuration
 
 - GitHub Organisation secrets
--- `BINTRAY_USERNAME` - Your Bintray user account name
--- `BINTRAY_PASSWORD` - Your Bintray user **API Key**, **NOT** your Bintray user account password
--- `RELEASE_GITHUB_TOKEN` - Use the token on the VLINGO org
--- `SLACK_WEBHOOK` - Webhook for slack notifications, can be generated [here](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks)
+  - `BINTRAY_USERNAME` - Your Bintray user account name
+  - `BINTRAY_PASSWORD` - Your Bintray user **API Key**, **NOT** your Bintray user account password
+  - `RELEASE_GITHUB_TOKEN` - Use the token on the VLINGO org
+  - `SLACK_WEBHOOK` - Webhook for slack notifications, can be generated [here](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks)
 
 The Bintray API key can be obtained from your Bintray user profile:
 
