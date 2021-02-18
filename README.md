@@ -42,6 +42,44 @@ You can refer to [this link](PivotalCloudFoundry/DEPLOY.md) to read the document
 
 In our [examples repository](https://github.com/vlingo/vlingo-examples) you have an example of how to deploy two services working together.
 
+## Snapshots repository
+
+VLINGO snapshots are published to [GitHub Packages](https://github.com/vlingo/vlingo-platform/packages).
+
+All VLINGO libraries are configured to use GitHub Packages for snapshots:
+
+```xml
+<project>
+  <!-- ... -->
+  <repositories>
+    <repository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/vlingo/vlingo-platform</url>
+      <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+  </repositories>
+</project>
+```
+
+GitHub [requires authentication with a Personal Access Token](https://docs.github.com/en/packages/guides/configuring-apache-maven-for-use-with-github-packages#authenticating-with-a-personal-access-token)
+to use their Maven repository.
+In order to build VLINGO libraries locally, you will need to configure the following in your `~/.m2/settings.xml`:
+
+```xml
+<settings>
+  <servers>
+    <server>
+      <id>github</id>
+      <username>GITHUB-USERNAME</username>
+      <password>GITHUB-PERSONAL-ACCESS-TOKEN</password>
+    </server>
+  </servers>
+</settings>
+```
+
+Replace `GITHUB-USERNAME` with your GitHub username, and `GITHUB-PERSONAL-ACCESS-TOKEN` with your Personal Access Token.
+Personal Access Tokens can be created in Settings > Developer Settings > [Personal Access Tokens](https://github.com/settings/tokens) on GitHub.
+Remember to create the token with `read:packages` scope.
 
 License (See LICENSE file for full license)
 -------------------------------------------
