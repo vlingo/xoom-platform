@@ -58,6 +58,13 @@ All VLINGO libraries are configured to use GitHub Packages for snapshots:
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
   </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/vlingo/vlingo-platform</url>
+      <snapshots><enabled>true</enabled></snapshots>
+    </pluginRepository>
+  </pluginRepositories>
 </project>
 ```
 
