@@ -1,14 +1,12 @@
-# VLINGO/PLATFORM
+# VLINGO XOOM PLATFORM SDK
 
 [![Build](https://github.com/vlingo/vlingo-platform/workflows/Release/badge.svg)](https://github.com/vlingo/vlingo-platform/actions?query=workflow%3ARelease) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/vlingo-platform-java/community)
 
-The VLINGO/PLATFORM central "build all" and other control.
+The VLINGO XOOM platform central "build all" and other control.
 
 Docs: https://docs.vlingo.io/
 
-[Official VLINGO/PLATFORM website](https://vlingo.io/).
-
-[Read about the VLINGO/PLATFORM](https://docs.vlingo.io/) and about [its architecture](https://docs.vlingo.io/architecture).
+[Official VLINGO XOOM website](https://vlingo.io/).
 
 ## Getting started
 
