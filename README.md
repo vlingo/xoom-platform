@@ -2,7 +2,7 @@
 
 [![Build](https://github.com/vlingo/vlingo-platform/workflows/Release/badge.svg)](https://github.com/vlingo/vlingo-platform/actions?query=workflow%3ARelease) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/vlingo-platform-java/community)
 
-The VLINGO XOOM platform central "build all" and other control.
+Use the VLINGO XOOM OSS platform SDK for rapid delivery of low-code to full-code Reactive, Event-Driven Microservices and Applications using DOMA, DDD, and other approaches.
 
 Docs: https://docs.vlingo.io/
 
