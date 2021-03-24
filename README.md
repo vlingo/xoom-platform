@@ -30,12 +30,6 @@ See [RELEASE_HOW_TO](RELEASE_HOW_TO.md) for the release process.
   - `OSSRH_TOKEN` - password for the Sonatype OSSRH Maven repository
   - `SLACK_WEBHOOK` - Webhook for slack notifications, can be generated [here](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks)
 
-The Bintray API key can be obtained from your Bintray user profile:
-
-```
-  Username-drop-menu > Edit Profile > API Key (left bar menu)
-```
-
 ## Deployment to Pivotal Cloud Foundry
 
 You can refer to [this link](PivotalCloudFoundry/DEPLOY.md) to read the documentation about how to deploy to Pivotal Cloud Foundry platform.
