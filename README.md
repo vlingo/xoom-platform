@@ -38,9 +38,33 @@ In our [examples repository](https://github.com/vlingo/vlingo-examples) you have
 
 ## Snapshots repository
 
-VLINGO snapshots are published to [GitHub Packages](https://github.com/vlingo/vlingo-platform/packages).
+VLINGO snapshots are published to both [Sonatype](https://oss.sonatype.org/content/repositories/snapshots/io/vlingo/) and [GitHub Packages](https://github.com/vlingo/vlingo-platform/packages).
 
-All VLINGO libraries are configured to use GitHub Packages for snapshots:
+All VLINGO libraries are configured to use Sonatype for snapshots:
+
+```xml
+<project>
+  <!-- ... -->
+  <repositories>
+    <repository>
+      <id>ossrh-snapshots</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>ossrh-snapshots</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </pluginRepository>
+  </pluginRepositories>
+</project>
+```
+
+Snapshots can also be installed from GitHub Packages:
 
 ```xml
 <project>
