@@ -38,15 +38,15 @@ if [ ${#VLINGO_PROJECTS[@]} -eq 0 ]; then
 fi
 
 msg() {
-  echo -e "\x1B[32m[VLINGO BUILD]\x1B[0m $1"
+  echo -e "\x1B[32m[VLINGO]\x1B[0m $1"
 }
 
 msg_scoped() {
-  echo -e "\x1B[32m[VLINGO BUILD]\x1B[0m\x1B[33m[$1]\x1B[0m $2"
+  echo -e "\x1B[32m[VLINGO]\x1B[0m\x1B[33m[$1]\x1B[0m $2"
 }
 
 msg_error() {
-  echo -e "\x1B[32m[VLINGO BUILD]\x1B[0m\x1B[31m[Error]\x1B[0m $1"
+  echo -e "\x1B[32m[VLINGO]\x1B[0m\x1B[31m[Error]\x1B[0m $1"
   exit 1
 }
 
