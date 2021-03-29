@@ -19,7 +19,17 @@ Prerequisites:
 
 See [RELEASE_HOW_TO](RELEASE_HOW_TO.md) for the release process.
 
-### Build configuration
+### Local builds
+
+To build all platform modules locally, clone all the modules (or pull the latest changes),
+and execute the `install` phase with the `modules` profile activated:
+
+```bash
+./pull.sh
+mvn clean install -Pmodules
+```
+
+### CI build configuration
 
 - GitHub Organisation secrets
   - `RELEASE_GITHUB_TOKEN` - Use the token on the VLINGO org

@@ -10,4 +10,40 @@
   <packaging>pom</packaging>
   <name>vlingo-platform</name>
   <url>http://maven.apache.org</url>
+
+  <profiles>
+    <profile>
+      <id>modules</id>
+      <activation>
+        <property>
+          <name>modules</name>
+        </property>
+      </activation>
+      <modules>
+        <module>../vlingo-common</module>
+        <module>../vlingo-actors</module>
+        <module>../vlingo-wire</module>
+        <module>../vlingo-streams</module>
+        <module>../vlingo-streams-tck</module>
+        <module>../vlingo-http</module>
+        <module>../vlingo-cluster</module>
+        <module>../vlingo-directory</module>
+        <module>../vlingo-auth</module>
+        <module>../vlingo-symbio</module>
+        <module>../vlingo-symbio-dynamodb</module>
+        <module>../vlingo-symbio-geode</module>
+        <module>../vlingo-symbio-jdbc</module>
+        <module>../vlingo-lattice</module>
+        <module>../vlingo-lattice-exchange-camel</module>
+        <module>../vlingo-lattice-exchange-rabbitmq</module>
+        <module>../vlingo-xoom</module>
+        <module>../vlingo-xoom-starter</module>
+        <module>../vlingo-schemata</module>
+        <module>../vlingo-build-plugins</module>
+        <module>../vlingo-telemetry</module>
+        <module>../vlingo-examples</module>
+        <module>../vlingo-helloworld</module>
+      </modules>
+    </profile>
+  </profiles>
 </project>
