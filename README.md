@@ -1,6 +1,6 @@
 # VLINGO XOOM PLATFORM SDK
 
-[![Build](https://github.com/vlingo/vlingo-platform/workflows/Release/badge.svg)](https://github.com/vlingo/vlingo-platform/actions?query=workflow%3ARelease) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/vlingo-platform-java/community)
+[![Build](https://github.com/vlingo/xoom-platform/workflows/Release/badge.svg)](https://github.com/vlingo/xoom-platform/actions?query=workflow%3ARelease) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/vlingo-platform-java/community)
 
 Use the VLINGO XOOM OSS platform SDK for rapid delivery of low-code to full-code Reactive, Event-Driven Microservices and Applications using DOMA, DDD, and other approaches.
 
@@ -44,11 +44,11 @@ mvn clean install -Pmodules
 
 You can refer to [this link](PivotalCloudFoundry/DEPLOY.md) to read the documentation about how to deploy to Pivotal Cloud Foundry platform.
 
-In our [examples repository](https://github.com/vlingo/vlingo-examples) you have an example of how to deploy two services working together.
+In our [examples repository](https://github.com/vlingo/xoom-examples) you have an example of how to deploy two services working together.
 
 ## Snapshots repository
 
-VLINGO snapshots are published to both [Sonatype](https://oss.sonatype.org/content/repositories/snapshots/io/vlingo/) and [GitHub Packages](https://github.com/vlingo/vlingo-platform/packages).
+VLINGO snapshots are published to both [Sonatype](https://oss.sonatype.org/content/repositories/snapshots/io/vlingo/xoom/) and [GitHub Packages](https://github.com/vlingo/xoom-platform/packages).
 
 All VLINGO libraries are configured to use Sonatype for snapshots:
 
@@ -82,14 +82,14 @@ Snapshots can also be installed from GitHub Packages:
   <repositories>
     <repository>
       <id>github</id>
-      <url>https://maven.pkg.github.com/vlingo/vlingo-platform</url>
+      <url>https://maven.pkg.github.com/vlingo/xoom-platform</url>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
   </repositories>
   <pluginRepositories>
     <pluginRepository>
       <id>github</id>
-      <url>https://maven.pkg.github.com/vlingo/vlingo-platform</url>
+      <url>https://maven.pkg.github.com/vlingo/xoom-platform</url>
       <snapshots><enabled>true</enabled></snapshots>
     </pluginRepository>
   </pluginRepositories>

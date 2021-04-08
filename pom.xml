@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>io.vlingo</groupId>
-  <artifactId>vlingo-platform</artifactId>
+  <groupId>io.vlingo.xoom</groupId>
+  <artifactId>xoom-platform</artifactId>
 
   <!-- Latest released version. Commit new version for release of projects from PLATFORM -->
   <!-- Only semantic versions are supported (i.e. x.y.z) -->
   <version>1.6.0</version>
 
   <packaging>pom</packaging>
-  <name>vlingo-platform</name>
+  <name>xoom-platform</name>
   <url>http://maven.apache.org</url>
 
   <profiles>
@@ -20,29 +20,29 @@
         </property>
       </activation>
       <modules>
-        <module>../vlingo-common</module>
-        <module>../vlingo-actors</module>
-        <module>../vlingo-wire</module>
-        <module>../vlingo-streams</module>
-        <module>../vlingo-streams-tck</module>
-        <module>../vlingo-http</module>
-        <module>../vlingo-cluster</module>
-        <module>../vlingo-directory</module>
-        <module>../vlingo-auth</module>
-        <module>../vlingo-symbio</module>
-        <module>../vlingo-symbio-dynamodb</module>
-        <module>../vlingo-symbio-geode</module>
-        <module>../vlingo-symbio-jdbc</module>
-        <module>../vlingo-lattice</module>
-        <module>../vlingo-lattice-exchange-camel</module>
-        <module>../vlingo-lattice-exchange-rabbitmq</module>
-        <module>../vlingo-xoom</module>
-        <module>../vlingo-xoom-starter</module>
-        <module>../vlingo-schemata</module>
-        <module>../vlingo-build-plugins</module>
-        <module>../vlingo-telemetry</module>
-        <module>../vlingo-examples</module>
-        <module>../vlingo-helloworld</module>
+        <module>../xoom-common</module>
+        <module>../xoom-actors</module>
+        <module>../xoom-wire</module>
+        <module>../xoom-streams</module>
+        <module>../xoom-streams-tck</module>
+        <module>../xoom-http</module>
+        <module>../xoom-cluster</module>
+        <module>../xoom-directory</module>
+        <module>../xoom-auth</module>
+        <module>../xoom-symbio</module>
+        <module>../xoom-symbio-dynamodb</module>
+        <module>../xoom-symbio-geode</module>
+        <module>../xoom-symbio-jdbc</module>
+        <module>../xoom-lattice</module>
+        <module>../xoom-lattice-exchange-camel</module>
+        <module>../xoom-lattice-exchange-rabbitmq</module>
+        <module>../xoom-turbo</module>
+        <module>../xoom-designer</module>
+        <module>../xoom-schemata</module>
+        <module>../xoom-build-plugins</module>
+        <module>../xoom-telemetry</module>
+        <module>../xoom-examples</module>
+        <module>../xoom-helloworld</module>
       </modules>
     </profile>
   </profiles>

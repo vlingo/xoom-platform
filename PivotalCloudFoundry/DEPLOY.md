@@ -54,4 +54,4 @@ Along with your configured `manifest.yml`, push your project:
 
 That's all it takes! The service/application is in the Pivotal Cloud Foundry, deployed and working. Use the Pivotal Console to see your services, the logs, and any other project infrastructure artifacts.
 
-See the [vlingo-examples repository](https://github.com/vlingo/vlingo-examples) for a working configuration. This demonstrates how to integrate two or more services that are deployed to the Pivotal Cloud Foundry platform.
+See the [xoom-examples repository](https://github.com/vlingo/xoom-examples) for a working configuration. This demonstrates how to integrate two or more services that are deployed to the Pivotal Cloud Foundry platform.
