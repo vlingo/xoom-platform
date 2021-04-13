@@ -1,4 +1,4 @@
-# The VLINGO/PLATFORM release process is as follows:
+# The VLINGO XOOM Platform release process is as follows:
 
 1. `cd xoom-platform`
 2. `./release.sh 1.2.3`
