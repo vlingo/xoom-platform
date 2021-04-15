@@ -27,6 +27,7 @@
         <module>../xoom-streams-tck</module>
         <module>../xoom-http</module>
         <module>../xoom-cluster</module>
+        <module>../xoom-graphql</module>
         <module>../xoom-directory</module>
         <module>../xoom-auth</module>
         <module>../xoom-symbio</module>
