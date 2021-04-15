@@ -60,7 +60,7 @@ _show_config() {
 _last_commit() {
   project=$1
   project_path="$XOOM_HOME/$project"
-  msg_scoped $project "Last commit: $(cd $project_path && git log --oneline -1)"
+  msg_scoped $project "\x1B[32m$(git branch --show-current)\x1B[0m last commit: $(cd $project_path && git log --oneline -1)"
 }
 
 _clone_or_pull_project() {
