@@ -2,6 +2,32 @@
 
 [![Build](https://github.com/vlingo/xoom-platform/workflows/Release/badge.svg)](https://github.com/vlingo/xoom-platform/actions?query=workflow%3ARelease) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/vlingo-platform-java/community)
 
+[![Build](https://github.com/vlingo/xoom-common/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-common/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-actors/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-actors/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-wire/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-wire/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-streams/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-streams/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-streams-tck/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-streams-tck/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-http/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-http/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-cluster/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-cluster/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-graphql/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-graphql/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-directory/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-directory/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-auth/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-auth/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-symbio/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-symbio/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-symbio-dynamodb/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-symbio-dynamodb/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-symbio-geode/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-symbio-geode/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-symbio-jdbc/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-symbio-jdbc/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-lattice/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-lattice/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-lattice-exchange-camel/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-lattice-exchange-camel/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-lattice-exchange-rabbitmq/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-lattice-exchange-rabbitmq/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-turbo/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-turbo/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-designer/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-designer/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-schemata/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-schemata/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-build-plugins/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-build-plugins/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-build-plugins-test/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-build-plugins-test/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-telemetry/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-telemetry/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-examples/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-examples/actions?query=workflow%3ABuild)
+[![Build](https://github.com/vlingo/xoom-helloworld/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-helloworld/actions?query=workflow%3ABuild)
+
 Use the VLINGO XOOM OSS platform SDK for rapid delivery of low-code to full-code Reactive, Event-Driven Microservices and Applications using DOMA, DDD, and other approaches.
 
 Docs: https://docs.vlingo.io/
