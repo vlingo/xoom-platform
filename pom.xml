@@ -42,7 +42,7 @@
         <module>../xoom-schemata</module>
         <module>../xoom-build-plugins</module>
         <module>../xoom-telemetry</module>
-        <module>../xoom-examples</module>
+        <!-- <module>../xoom-examples</module> -->
         <module>../xoom-helloworld</module>
       </modules>
     </profile>
