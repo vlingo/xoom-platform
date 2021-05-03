@@ -38,7 +38,7 @@ Docs: https://docs.vlingo.io/
 
 Prerequisites:
 * Java JDK 8 or greater
-* GraalVM 21.1.0 Java 8/11
+* [GraalVM 21.1.0 Java 8/11](https://www.graalvm.org/docs/getting-started/)
 
 ## Maintaining the Libraries
 
