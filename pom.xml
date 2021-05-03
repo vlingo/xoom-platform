@@ -38,8 +38,8 @@
         <module>../xoom-lattice-exchange-camel</module>
         <module>../xoom-lattice-exchange-rabbitmq</module>
         <module>../xoom-turbo</module>
-        <module>../xoom-designer</module>
         <module>../xoom-schemata</module>
+        <module>../xoom-designer</module>
         <module>../xoom-build-plugins</module>
         <module>../xoom-telemetry</module>
         <!-- <module>../xoom-examples</module> -->
