@@ -14,6 +14,7 @@ all_projects=(
   "xoom-streams-tck"
   "xoom-wire"
   "xoom-cluster"
+  "xoom-graphql"
   "xoom-directory"
   "xoom-http"
   "xoom-auth"
