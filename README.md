@@ -60,6 +60,7 @@ mvn clean install -Pmodules
 ```bash
 mvn clean install -Pmodules -Pnative-image
 ```
+More details [GraalVM](GraalVM.md)
 
 ### CI build configuration
 
