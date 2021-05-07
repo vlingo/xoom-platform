@@ -15,7 +15,6 @@ trigger_dependency()
     # Update project version and all io.vlingo.xoom dependencies
     mvn versions:set -DnewVersion=$2
     # mvn versions:use-dep-version -Dincludes=io.vlingo.xoom -DdepVersion=$2 -DforceVersion=true
-    [ -f pom-relocation.xml ] && mvn -f pom-relocation.xml versions:set -DnewVersion=$2 && git add pom-relocation.xml
     sed -i'.bkp' -e '/<artifactId>xoom-[a-z\-]*<\/artifactId>/{' -e 'n;s/\(<version>\)[0-9\.]*\(<\/version>\)/\1'$2'\2/' -e '}' -e 's/\(io.vlingo.xoom:xoom-[a-z\-]*\):[0-9\.]*/\1:'$2'/' README.md
 
     git add pom.xml README.md
@@ -25,7 +24,6 @@ trigger_dependency()
     # Prepare for next development version
     mvn versions:set -DnewVersion=$3
     # mvn versions:use-dep-version -Dincludes=io.vlingo.xoom -DdepVersion=$3 -DforceVersion=true
-    [ -f pom-relocation.xml ] && mvn -f pom-relocation.xml versions:set -DnewVersion=$3 && git add pom-relocation.xml
     git add pom.xml
     git commit -m "Next development version $3"
 
@@ -35,8 +33,8 @@ trigger_dependency()
 VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
 echo "Detected version $VERSION"
 
-git config --global user.email "VaughnVernon"
-git config --global user.name "vaughn@forcomprehension.com"
+git config --global user.email "vaughn@kalele.io"
+git config --global user.name "Vaughn Vernon"
 
 # New version
 MAJOR=$(echo $VERSION | cut -f 1 -d '.')
