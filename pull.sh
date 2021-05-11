@@ -15,6 +15,7 @@ all_projects=(
   "xoom-wire"
   "xoom-cluster"
   "xoom-graphql"
+  "xoom-codegen"
   "xoom-directory"
   "xoom-http"
   "xoom-auth"
