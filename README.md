@@ -10,6 +10,7 @@
 [![xoom-http](https://github.com/vlingo/xoom-http/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-http/actions?query=workflow%3ABuild)
 [![xoom-cluster](https://github.com/vlingo/xoom-cluster/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-cluster/actions?query=workflow%3ABuild)
 [![xoom-graphql](https://github.com/vlingo/xoom-graphql/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-graphql/actions?query=workflow%3ABuild)
+[![xoom-codegen](https://github.com/vlingo/xoom-codegen/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-codegen/actions?query=workflow%3ABuild)
 [![xoom-directory](https://github.com/vlingo/xoom-directory/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-directory/actions?query=workflow%3ABuild)
 [![xoom-auth](https://github.com/vlingo/xoom-auth/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-auth/actions?query=workflow%3ABuild)
 [![xoom-symbio](https://github.com/vlingo/xoom-symbio/workflows/Build/badge.svg)](https://github.com/vlingo/xoom-symbio/actions?query=workflow%3ABuild)
