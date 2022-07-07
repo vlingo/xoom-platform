@@ -5,7 +5,7 @@
 
   <!-- Latest released version. Commit new version for release of projects from PLATFORM -->
   <!-- Only semantic versions are supported (i.e. x.y.z) -->
-  <version>1.9.3</version>
+  <version>1.10.0</version>
 
   <packaging>pom</packaging>
   <name>xoom-platform</name>
