@@ -32,7 +32,7 @@ jobs:
         run: mvn --batch-mode --update-snapshots -Pgithub-releases install
 
       - name: Publish artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: JARs
           path: target/*.jar
