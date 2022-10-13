@@ -26,7 +26,7 @@ jobs:
 
       - name: Determine version
         id: version
-        run: echo "::set-output name=xoom_version::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)"
+        run: echo "xoom_version=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_OUTPUT
 
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots -Pgithub-releases install
