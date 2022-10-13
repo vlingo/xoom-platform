@@ -8,6 +8,16 @@ on:
         default: 'mvn --batch-mode --update-snapshots -Pgithub-releases install'
         required: false
         type: string
+      maven-deploy-github-cmd:
+        description: 'Maven command to deploy the project to github'
+        default: 'mvn --batch-mode -DskipTests -DuseGitHubPackages -DsignArtifacts -Pgithub-releases deploy'
+        required: false
+        type: string
+      maven-deploy-central-cmd:
+        description: 'Maven command to build the project to maven central'
+        default: 'mvn --batch-mode -DskipTests -DuseSonatype -DsignArtifacts -Pgithub-releases deploy'
+        required: false
+        type: string
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -73,7 +83,7 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
 
       - name: Deploy
-        run: mvn --batch-mode -DskipTests -DuseGitHubPackages -DsignArtifacts -Pgithub-releases deploy
+        run: ${{ inputs.maven-deploy-github-cmd }}
         env:
           GITHUB_TOKEN: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
@@ -116,7 +126,7 @@ jobs:
         run: sed -i'.bkp' -e 's/\(<\/servers>\)/  <server><id>github<\/id><username>\${env.GITHUB_ACTOR}<\/username><password>\${env.GITHUB_TOKEN}<\/password><\/server>\n\1/g' ~/.m2/settings.xml
 
       - name: Deploy
-        run: mvn --batch-mode -DskipTests -DuseSonatype -DsignArtifacts -Pgithub-releases deploy
+        run: ${{ inputs.maven-deploy-central-cmd }}
         env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
