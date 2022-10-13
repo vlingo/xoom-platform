@@ -22,13 +22,7 @@ jobs:
         with:
           java-version: '8'
           distribution: 'zulu'
-
-      - name: Cache Maven packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2-
+          cache: 'maven'
 
       - name: Determine version
         id: version
@@ -68,15 +62,9 @@ jobs:
         with:
           java-version: '8'
           distribution: 'zulu'
+          cache: 'maven'
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
-
-      - name: Cache Maven packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2-
 
       - name: Deploy
         run: mvn --batch-mode -DskipTests -DuseGitHubPackages -DsignArtifacts -Pgithub-releases deploy
@@ -111,6 +99,7 @@ jobs:
         with:
           java-version: '8'
           distribution: 'zulu'
+          cache: 'maven'
           server-id: central-repository-ossrh
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
@@ -119,13 +108,6 @@ jobs:
 
       - name: Configure an additional Maven repository
         run: sed -i'.bkp' -e 's/\(<\/servers>\)/  <server><id>github<\/id><username>\${env.GITHUB_ACTOR}<\/username><password>\${env.GITHUB_TOKEN}<\/password><\/server>\n\1/g' ~/.m2/settings.xml
-
-      - name: Cache Maven packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2-
 
       - name: Deploy
         run: mvn --batch-mode -DskipTests -DuseSonatype -DsignArtifacts -Pgithub-releases deploy
