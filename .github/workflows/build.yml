@@ -60,7 +60,7 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: Bob the Builder
           DISCORD_COLOR: "${{ job.status == 'success' && '65280' || '16711680' }}"
-          DISCORD_EMBEDS: '[{"title":"Build ${{ job.status }}", "description":"${{ github.repository }}:${{ steps.version.outputs.xoom_version }}"}]'
+          DISCORD_EMBEDS: '[{"title":"Build ${{ job.status }}", "description":"[${{ github.repository }}](https://github.com/${{ github.repository }}):${{ steps.version.outputs.xoom_version }}","author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "https://github.com/${{ github.actor }}"}}]'
 
   deploy-github:
     name: Deploy to GitHub
