@@ -91,7 +91,7 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: Suzi the Publisher
-          DISCORD_EMBEDS: '[{"title":"GitHub Deployment ${{ job.status }}", "description":":rocket: [${{ github.repository }}:${{ steps.version.outputs.xoom_version }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})","author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "${{ github.server_url }}/${{ github.actor }}"},"color":"${{ job.status == ''success'' && ''65280'' || ''16711680'' }}"}]'
+          DISCORD_EMBEDS: '[{"title":"GitHub Deployment ${{ job.status }}", "description":":rocket: [${{ github.repository }}:${{ needs.build.outputs.xoom_version }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})","author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "${{ github.server_url }}/${{ github.actor }}"},"color":"${{ job.status == ''success'' && ''65280'' || ''16711680'' }}"}]'
 
   deploy-central:
     name: Deploy to Maven Central
@@ -136,4 +136,4 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: Suzi the Publisher
-          DISCORD_EMBEDS: '[{"title":"Sonatype Deployment ${{ job.status }}", "description":":rocket: [${{ github.repository }}:${{ steps.version.outputs.xoom_version }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})","author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "${{ github.server_url }}/${{ github.actor }}"},"color":"${{ job.status == ''success'' && ''65280'' || ''16711680'' }}"}]'
+          DISCORD_EMBEDS: '[{"title":"Sonatype Deployment ${{ job.status }}", "description":":rocket: [${{ github.repository }}:${{ needs.build.outputs.xoom_version }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})","author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "${{ github.server_url }}/${{ github.actor }}"},"color":"${{ job.status == ''success'' && ''65280'' || ''16711680'' }}"}]'
