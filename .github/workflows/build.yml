@@ -60,7 +60,7 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: Bob the Builder
           DISCORD_AVATAR: 'https://vlingo.io/wp-content/uploads/cropped-vlingo-favicon-180x180.png'
-          DISCORD_COLOR: ${{ job.status == "success" && "65280" || "16711680" }}
+          DISCORD_COLOR: "${{ job.status == 'success' && '65280' || '16711680' }}"
           DISCORD_EMBEDS: '{"embeds": [{"title":"${{ github.repository }}:${{ steps.version.outputs.xoom_version }}","color":"${{ env.DISCORD_COLOR }}"}]}'
 
   deploy-github:
