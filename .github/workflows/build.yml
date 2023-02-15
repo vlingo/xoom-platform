@@ -61,7 +61,7 @@ jobs:
           DISCORD_USERNAME: Bob the Builder
           DISCORD_AVATAR: 'https://vlingo.io/wp-content/uploads/cropped-vlingo-favicon-180x180.png'
         with:
-          args: '{{ EVENT_PAYLOAD.repository.full_name }}:{{ steps.version.outputs.xoom_version }}'
+          args: '{{ EVENT_PAYLOAD.repository.full_name }}:${{ steps.version.outputs.xoom_version }}'
 
   deploy-github:
     name: Deploy to GitHub
@@ -95,7 +95,7 @@ jobs:
           DISCORD_USERNAME: Suzi the Publisher
           DISCORD_AVATAR: 'https://vlingo.io/wp-content/uploads/cropped-vlingo-favicon-180x180.png'
         with:
-          args: 'GitHub Deployment :rocket: {{ EVENT_PAYLOAD.repository.full_name }} {{ needs.build.outputs.xoom_version }}'
+          args: 'GitHub Deployment :rocket: {{ EVENT_PAYLOAD.repository.full_name }} ${{ needs.build.outputs.xoom_version }}'
 
   deploy-central:
     name: Deploy to Maven Central
@@ -142,4 +142,4 @@ jobs:
           DISCORD_USERNAME: Suzi the Publisher
           DISCORD_AVATAR: 'https://vlingo.io/wp-content/uploads/cropped-vlingo-favicon-180x180.png'
         with:
-          args: 'Sonatype Deployment :rocket: {{ EVENT_PAYLOAD.repository.full_name }} {{ needs.build.outputs.xoom_version }}'
+          args: 'Sonatype Deployment :rocket: {{ EVENT_PAYLOAD.repository.full_name }} ${{ needs.build.outputs.xoom_version }}'
