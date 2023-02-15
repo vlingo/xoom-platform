@@ -59,7 +59,7 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: Bob the Builder
-          DISCORD_EMBEDS: '[{"title":"Build ${{ job.status }}", "description":"[${{ github.repository }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}):${{ steps.version.outputs.xoom_version }}","author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "${{ github.server_url }}/${{ github.actor }}"},"color":"${{ job.status == ''success'' && ''65280'' || ''16711680'' }}"}]'
+          DISCORD_EMBEDS: '[{"title":"Build ${{ job.status }}", "description":"[${{ github.repository }}:${{ steps.version.outputs.xoom_version }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})","author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "${{ github.server_url }}/${{ github.actor }}"},"color":"${{ job.status == ''success'' && ''65280'' || ''16711680'' }}"}]'
 
   deploy-github:
     name: Deploy to GitHub
