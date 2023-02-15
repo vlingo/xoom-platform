@@ -31,6 +31,6 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: Suzi the Publisher
-          DISCORD_AVATAR: 'https://vlingo.io/wp-content/uploads/cropped-vlingo-favicon-180x180.png'
+          DISCORD_EMBEDS: '[{"title":"VLINGO XOOM Platform Release", "description":":rocket: [${{ github.repository }}:${{ env.RELEASED_VERSION }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})","author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "${{ github.server_url }}/${{ github.actor }}"},"color":"${{ job.status == ''success'' && ''65280'' || ''16711680'' }}"}]'
         with:
           args: 'VLINGO XOOM Platform Release :rocket: {{ RELEASED_VERSION }}'
