@@ -60,8 +60,7 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: Bob the Builder
           DISCORD_AVATAR: 'https://vlingo.io/wp-content/uploads/cropped-vlingo-favicon-180x180.png'
-        with:
-          args: '{{ EVENT_PAYLOAD.repository.full_name }}:${{ steps.version.outputs.xoom_version }}'
+          DISCORD_EMBEDS: '{"embeds": [{"title":"${{ github.repository }}:${{ steps.version.outputs.xoom_version }}","color":"${{ job.status == "success" && "65280" || "16711680" }}"}]}'
 
   deploy-github:
     name: Deploy to GitHub
