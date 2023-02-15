@@ -26,14 +26,11 @@ jobs:
       - name: Determine the released version
         run: echo "RELEASED_VERSION="$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout) >> $GITHUB_ENV
 
-      - name: Notify slack
-        uses: rtCamp/action-slack-notify@v2
+      - name: Notify discord
+        uses: 'Ilshidur/action-discord@0.3.2'
         env:
-          SLACK_COLOR: "${{ job.status == 'success' && 'good' || 'danger' }}"
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_CHANNEL: ci-cd
-          SLACK_USERNAME: Bob the Builder
-          SLACK_ICON: 'https://vlingo.io/wp-content/uploads/cropped-vlingo-favicon-180x180.png'
-          SLACK_FOOTER: '${{ github.repository }}'
-          SLACK_TITLE: 'VLINGO XOOM Platform Release'
-          SLACK_MESSAGE: ${{ env.RELEASED_VERSION }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          DISCORD_USERNAME: Suzi the Publisher
+          DISCORD_AVATAR: 'https://vlingo.io/wp-content/uploads/cropped-vlingo-favicon-180x180.png'
+        with:
+          args: 'VLINGO XOOM Platform Release :rocket: {{ RELEASED_VERSION }}'

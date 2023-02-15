@@ -65,7 +65,7 @@ mvn clean install -Pmodules
   - `MAVEN_GPG_PASSPHRASE` - password for the gpg key
   - `OSSRH_USERNAME` - username for the Sonatype OSSRH Maven repository
   - `OSSRH_TOKEN` - password for the Sonatype OSSRH Maven repository
-  - `SLACK_WEBHOOK` - Webhook for slack notifications, can be generated [here](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks)
+  - `DISCORD_WEBHOOK` - Webhook for discord notifications, can be generated [here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
 
 ## Deployment to Pivotal Cloud Foundry
 
