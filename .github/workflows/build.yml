@@ -48,7 +48,7 @@ jobs:
         run: ${{ inputs.maven-build-cmd }}
 
       - name: Publish artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: JARs
           path: target/*.jar
